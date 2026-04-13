@@ -1,0 +1,197 @@
+@import "tailwindcss";
+
+/* ─── Dark / light mode class variants ───────────────────── */
+@variant dark (&:where(.dark, .dark *));
+@variant light (&:where(.light, .light *));
+
+/* ─── Theme tokens ────────────────────────────────────────── */
+@theme inline {
+  /* Accent colors */
+  --color-smaragd: #2ed573;
+  --color-smaragd-dark: #22b85a;
+  --color-smaragd-light: #5ee89a;
+  --color-coral: #e6734f;
+  --color-coral-dark: #d45a35;
+  --color-coral-light: #f09e85;
+
+  /* APAC dimension colors */
+  --color-apac-adaptability: #2ed573;
+  --color-apac-personality: #e6734f;
+  --color-apac-awareness: #3b82f6;
+  --color-apac-connection: #8b5cf6;
+
+  /* Semantic colors — backed by CSS vars, switch by toggling .dark on <html> */
+  --color-page: var(--bg-page);
+  --color-surface: var(--bg-surface);
+  --color-surface-light: var(--bg-surface-light);
+  --color-surface-border: var(--bg-surface-border);
+  --color-heading: var(--text-heading);
+  --color-body: var(--text-body);
+  --color-muted: var(--text-muted);
+
+  /* Typography */
+  --font-heading: "Afacad Flux", sans-serif;
+  --font-body: var(--font-inter), "Inter", sans-serif;
+
+  /* Border radius (per design spec) */
+  --radius-sm: 4px;
+  --radius-default: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* Named shadows */
+  --shadow-card: 0 0 0 1px #27272a, 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-card-hover: 0 0 0 1px rgba(46, 213, 115, 0.2),
+    0 4px 24px rgba(0, 0, 0, 0.5);
+  --shadow-glow-smaragd: 0 0 40px rgba(46, 213, 115, 0.18);
+  --shadow-glow-smaragd-strong: 0 0 64px rgba(46, 213, 115, 0.3);
+  --shadow-glow-coral: 0 0 40px rgba(230, 115, 79, 0.18);
+
+  /* Animations */
+  --animate-float: float 8s ease-in-out infinite;
+  --animate-float-slow: float-slow 12s ease-in-out infinite;
+  --animate-shimmer: shimmer 3s ease-in-out infinite;
+}
+
+/* ─── CSS custom properties ───────────────────────────────── */
+/* Light mode (no class on <html>) */
+:root {
+  --bg-page: #f4f6f9;
+  --bg-surface: #ffffff;
+  --bg-surface-light: #f0f2f5;
+  --bg-surface-border: #e2e5eb;
+
+  --text-heading: #0d1117;
+  --text-body: #4b5563;
+  --text-muted: #6b7280;
+}
+
+/* Dark mode (.dark on <html>) — default for this project */
+:root.dark {
+  --bg-page: #0d0d14;
+  --bg-surface: #13131f;
+  --bg-surface-light: #1a1a2e;
+  --bg-surface-border: #252538;
+
+  --text-heading: #f0f2f8;
+  --text-body: #b8bdd4;
+  --text-muted: #5d6280;
+}
+
+/* ─── Base styles ─────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-body);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Custom utilities ────────────────────────────────────── */
+@utility gradient-text {
+  background: linear-gradient(135deg, #2ed573 0%, #5ee89a 50%, #2ed573 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility gradient-text-warm {
+  background: linear-gradient(135deg, #2ed573 0%, #e6734f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility glass {
+  backdrop-filter: blur(16px);
+  background: color-mix(in srgb, var(--bg-surface) 60%, transparent);
+  border: 1px solid var(--bg-surface-border);
+}
+
+@utility bg-grid-pattern {
+  background-image: repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.03) 0px,
+      transparent 1px,
+      transparent 39px,
+      rgba(255, 255, 255, 0.03) 40px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.03) 0px,
+      transparent 1px,
+      transparent 39px,
+      rgba(255, 255, 255, 0.03) 40px
+    );
+  background-size: 40px 40px;
+}
+
+@utility bg-dot-pattern {
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.06) 1px,
+    transparent 1px
+  );
+  background-size: 24px 24px;
+}
+
+/* ─── Scrollbar ───────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-surface-border);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* ─── Keyframes ───────────────────────────────────────────── */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes shimmer {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* ─── Reduced motion ──────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
