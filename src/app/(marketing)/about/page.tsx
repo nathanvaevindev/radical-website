@@ -1,4 +1,9 @@
 import type { Metadata } from "next";
+import AboutHero from "@/components/organisms/about-hero";
+import AboutNelieke from "@/components/organisms/about-nelieke";
+import AboutOscar from "@/components/organisms/about-oscar";
+import AboutTeam from "@/components/organisms/about-team";
+import AboutClosing from "@/components/organisms/about-closing";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -7,5 +12,13 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-  return <main />;
+  return (
+    <main>
+      <AboutHero />
+      <AboutNelieke />
+      <AboutOscar />
+      <AboutTeam />
+      <AboutClosing />
+    </main>
+  );
 }

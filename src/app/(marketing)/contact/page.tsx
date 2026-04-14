@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ContactForm from "@/components/organisms/contact-form";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -7,5 +8,9 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-  return <main />;
+  return (
+    <main>
+      <ContactForm />
+    </main>
+  );
 }

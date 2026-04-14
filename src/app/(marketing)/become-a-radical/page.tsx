@@ -1,4 +1,10 @@
 import type { Metadata } from "next";
+import RadicalHero from "@/components/organisms/radical-hero";
+import RadicalSelection from "@/components/organisms/radical-selection";
+import RadicalGains from "@/components/organisms/radical-gains";
+import RadicalTestimonials from "@/components/organisms/radical-testimonials";
+import RadicalApac from "@/components/organisms/radical-apac";
+import RadicalFaq from "@/components/organisms/radical-faq";
 
 export const metadata: Metadata = {
   title: "Become a Radical",
@@ -7,5 +13,14 @@ export const metadata: Metadata = {
 };
 
 export default function BecomeARadicalPage() {
-  return <main />;
+  return (
+    <main>
+      <RadicalHero />
+      <RadicalSelection />
+      <RadicalGains />
+      <RadicalTestimonials />
+      <RadicalApac />
+      <RadicalFaq />
+    </main>
+  );
 }
