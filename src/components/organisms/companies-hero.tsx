@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const fadeUp = {
@@ -25,34 +26,21 @@ export default function CompaniesHero() {
           approach.&rdquo;
         </motion.blockquote>
 
-        {/* Right — Portrait placeholder */}
+        {/* Right — Nelieke portrait */}
         <motion.div
-          className="aspect-[3/4] overflow-hidden rounded-[12px] bg-surface-light md:aspect-[4/5]"
+          className="relative aspect-[3/4] overflow-hidden rounded-[12px] bg-surface-light md:aspect-[4/5]"
           variants={fadeUp}
           initial="hidden"
           animate="visible"
           transition={{ duration: 0.6, delay: 0.15 }}
         >
-          <div className="flex h-full items-center justify-center">
-            <div className="text-center">
-              <div className="mx-auto mb-2 flex h-14 w-14 items-center justify-center rounded-full bg-smaragd/10">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  className="text-smaragd"
-                  aria-hidden="true"
-                >
-                  <circle cx="12" cy="8" r="4" />
-                  <path d="M20 21a8 8 0 1 0-16 0" />
-                </svg>
-              </div>
-              <p className="text-xs text-muted">Nelieke Wismans</p>
-            </div>
-          </div>
+          <Image
+            src="/nelieke.jpeg"
+            alt="Portrait of Nelieke Wismans"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
         </motion.div>
       </div>
     </section>

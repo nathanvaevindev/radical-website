@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 type FounderBlockProps = {
@@ -7,6 +8,7 @@ type FounderBlockProps = {
   title: string;
   quote: string;
   paragraphs: string[];
+  imageSrc: string;
   flipped?: boolean;
 };
 
@@ -20,38 +22,25 @@ export default function FounderBlock({
   title,
   quote,
   paragraphs,
+  imageSrc,
   flipped = false,
 }: FounderBlockProps) {
   const portrait = (
     <motion.div
-      className="aspect-[3/4] overflow-hidden rounded-[12px] bg-surface-light"
+      className="relative aspect-[3/4] overflow-hidden rounded-[12px] bg-surface-light"
       variants={fadeUp}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.6 }}
     >
-      {/* Replace with real portrait via next/image */}
-      <div className="flex h-full items-center justify-center">
-        <div className="text-center">
-          <div className="mx-auto mb-2 flex h-14 w-14 items-center justify-center rounded-full bg-smaragd/10">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              className="text-smaragd"
-              aria-hidden="true"
-            >
-              <circle cx="12" cy="8" r="4" />
-              <path d="M20 21a8 8 0 1 0-16 0" />
-            </svg>
-          </div>
-          <p className="text-xs text-muted">{name}</p>
-        </div>
-      </div>
+      <Image
+        src={imageSrc}
+        alt={`Portrait of ${name}`}
+        fill
+        className="object-cover"
+        sizes="(max-width: 768px) 100vw, 50vw"
+      />
     </motion.div>
   );
 

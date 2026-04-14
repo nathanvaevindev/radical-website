@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import type { TeamMember } from "@/types";
 
@@ -9,7 +10,7 @@ const PLACEHOLDER_TEAM: TeamMember[] = [
     id: "1",
     name: "Nelieke Wismans",
     role: "Founder",
-    photoUrl: null,
+    photoUrl: "/nelieke.jpeg",
     bio: null,
     linkedinUrl: "https://www.linkedin.com/in/neliekewismans/",
     sortOrder: 1,
@@ -18,7 +19,7 @@ const PLACEHOLDER_TEAM: TeamMember[] = [
     id: "2",
     name: "Oscar Voskuil",
     role: "Co-founder",
-    photoUrl: null,
+    photoUrl: "/oscar.png",
     bio: null,
     linkedinUrl: "https://www.linkedin.com/in/oscarvoskuil/",
     sortOrder: 2,
@@ -27,7 +28,7 @@ const PLACEHOLDER_TEAM: TeamMember[] = [
     id: "3",
     name: "Vincent Zepeda",
     role: "Digital Transformation Specialist",
-    photoUrl: null,
+    photoUrl: "/Vincent.jpeg",
     bio: "Connects ambitious professionals with companies that match their values and vision.",
     linkedinUrl: null,
     sortOrder: 3,
@@ -36,7 +37,7 @@ const PLACEHOLDER_TEAM: TeamMember[] = [
     id: "4",
     name: "Nathan van Veen",
     role: "Digital Transformation Specialist",
-    photoUrl: null,
+    photoUrl: "/Nathan.jpeg",
     bio: "Builds the spaces where AI-natives grow, learn, and find their people.",
     linkedinUrl: null,
     sortOrder: 4,
@@ -115,13 +116,23 @@ export default function AboutTeam({ team }: Props) {
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.4, delay: 0.06 * i }}
             >
-              {/* Portrait placeholder */}
-              <div className="aspect-[4/3] overflow-hidden rounded-t-[12px] bg-surface-light">
-                <div className="flex h-full items-center justify-center">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-smaragd/10 text-lg font-bold text-smaragd">
-                    {member.name.charAt(0)}
+              {/* Portrait */}
+              <div className="relative aspect-[4/3] overflow-hidden rounded-t-[12px] bg-surface-light">
+                {member.photoUrl ? (
+                  <Image
+                    src={member.photoUrl}
+                    alt={`Portrait of ${member.name}`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                ) : (
+                  <div className="flex h-full items-center justify-center">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-full bg-smaragd/10 text-lg font-bold text-smaragd">
+                      {member.name.charAt(0)}
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
 
               <div className="p-5">
