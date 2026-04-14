@@ -25,12 +25,12 @@ const fadeUp = {
 export default function HeroHome() {
   return (
     <section className="relative -mt-18 flex min-h-[100dvh] items-center justify-center overflow-hidden">
-      {/* Three.js particle background — sits behind everything */}
+      {/* Canvas particle background */}
       <div className="absolute inset-0">
         <ParticleRCanvas />
       </div>
 
-      {/* Radial glow overlay for depth */}
+      {/* Radial glow overlay */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{
@@ -90,7 +90,7 @@ export default function HeroHome() {
         </motion.div>
       </div>
 
-      {/* Bottom gradient fade into page bg */}
+      {/* Bottom gradient fade */}
       <div
         className="pointer-events-none absolute bottom-0 left-0 h-32 w-full"
         style={{
