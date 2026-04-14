@@ -21,7 +21,7 @@ const ITEMS = [
 ];
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0 },
 };
 
@@ -34,7 +34,7 @@ export default function CompaniesValue() {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.5 }}
         >
           What Your Radicals Bring
@@ -48,8 +48,8 @@ export default function CompaniesValue() {
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.4, delay: 0.08 * i }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.5, delay: 0.08 * i }}
             >
               <span className="mt-0.5 text-lg text-smaragd" aria-hidden="true">
                 ✔

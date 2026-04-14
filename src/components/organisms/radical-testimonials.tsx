@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import type { Testimonial } from "@/types";
 
 // Placeholder testimonials — replaced by Supabase data
@@ -172,8 +173,12 @@ export default function RadicalTestimonials({ testimonials }: Props) {
   }, [paused]);
 
   return (
-    <section
+    <motion.section
       className="overflow-hidden py-24 lg:py-32"
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{ duration: 0.5 }}
       onPointerEnter={() => setPaused(true)}
       onPointerLeave={() => setPaused(false)}
     >
@@ -186,6 +191,6 @@ export default function RadicalTestimonials({ testimonials }: Props) {
           <TestimonialCard key={`${t.id}-${i}`} t={t} />
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }

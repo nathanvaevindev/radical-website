@@ -24,7 +24,7 @@ const STEPS = [
 ];
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0 },
 };
 
@@ -37,7 +37,7 @@ export default function RadicalSelection() {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.5 }}
         >
           <h2 className="font-heading text-3xl font-bold leading-snug text-heading md:text-4xl">
@@ -61,7 +61,7 @@ export default function RadicalSelection() {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-60px" }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           <StepTimeline steps={STEPS} />

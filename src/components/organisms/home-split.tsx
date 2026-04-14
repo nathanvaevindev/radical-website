@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Button from "@/components/atoms/button";
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0 },
 };
 
@@ -18,7 +18,7 @@ export default function HomeSplit() {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.5 }}
         >
           <div>
@@ -58,7 +58,7 @@ export default function HomeSplit() {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           <div>

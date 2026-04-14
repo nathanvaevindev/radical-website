@@ -12,7 +12,7 @@ type StepTimelineProps = {
 };
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 16 },
+  hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0 },
 };
 
@@ -26,8 +26,8 @@ export default function StepTimeline({ steps }: StepTimelineProps) {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-40px" }}
-          transition={{ duration: 0.4, delay: 0.08 * i }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 0.5, delay: 0.08 * i }}
         >
           {/* Vertical line + dot */}
           <div className="flex flex-col items-center">

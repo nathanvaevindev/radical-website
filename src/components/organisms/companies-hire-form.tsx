@@ -7,7 +7,7 @@ import type { HireFormData } from "@/types";
 import Button from "@/components/atoms/button";
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0 },
 };
 
@@ -41,7 +41,7 @@ export default function CompaniesHireForm() {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.5 }}
         >
           Hire a Radical
@@ -52,7 +52,7 @@ export default function CompaniesHireForm() {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           Start your search for the right AI professional
@@ -63,7 +63,7 @@ export default function CompaniesHireForm() {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-60px" }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.5, delay: 0.15 }}
         >
           {submitted ? (

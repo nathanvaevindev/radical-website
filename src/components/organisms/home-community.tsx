@@ -60,7 +60,7 @@ const COMMUNITY_VALUES = [
 ];
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0 },
 };
 
@@ -81,7 +81,7 @@ export default function HomeCommunity({ events }: Props) {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.5 }}
         >
           The Radical Community
@@ -92,7 +92,7 @@ export default function HomeCommunity({ events }: Props) {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           Our community is built on a curated selection process, centered around
@@ -110,8 +110,8 @@ export default function HomeCommunity({ events }: Props) {
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.4 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.5 }}
             >
               Upcoming Events
             </motion.p>
@@ -126,8 +126,8 @@ export default function HomeCommunity({ events }: Props) {
                     variants={fadeUp}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, margin: "-40px" }}
-                    transition={{ duration: 0.4, delay: 0.05 * i }}
+                    viewport={{ once: true, amount: 0.15 }}
+                    transition={{ duration: 0.5, delay: 0.08 * i }}
                   >
                     {/* Date block */}
                     <div className="flex h-14 w-14 shrink-0 flex-col items-center justify-center rounded-lg bg-surface-light">
@@ -164,8 +164,8 @@ export default function HomeCommunity({ events }: Props) {
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.4, delay: 0.15 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.5, delay: 0.15 }}
             >
               {COMMUNITY_VALUES.map((value) => (
                 <li key={value} className="flex gap-3 text-body">
@@ -183,8 +183,8 @@ export default function HomeCommunity({ events }: Props) {
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.4, delay: 0.2 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
             >
               <Button href="/community">Go to Community</Button>
             </motion.div>
@@ -196,7 +196,7 @@ export default function HomeCommunity({ events }: Props) {
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.5, delay: 0.15 }}
           >
             <div className="relative aspect-[4/3] w-full bg-surface-light md:aspect-auto md:h-full md:min-h-[480px]">

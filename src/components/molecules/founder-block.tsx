@@ -13,7 +13,7 @@ type FounderBlockProps = {
 };
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0 },
 };
 
@@ -31,8 +31,8 @@ export default function FounderBlock({
       variants={fadeUp}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.6 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{ duration: 0.5 }}
     >
       <Image
         src={imageSrc}
@@ -50,8 +50,8 @@ export default function FounderBlock({
       variants={fadeUp}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.6, delay: 0.1 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{ duration: 0.5, delay: 0.08 }}
     >
       <h2 className="font-heading text-2xl font-bold leading-snug text-heading md:text-3xl lg:text-4xl">
         &ldquo;{quote}&rdquo;

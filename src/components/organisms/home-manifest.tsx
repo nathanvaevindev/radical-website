@@ -10,7 +10,7 @@ const POINTS = [
 ];
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0 },
 };
 
@@ -24,8 +24,8 @@ export default function HomeManifest() {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 0.5 }}
         >
           {/* Nelieke — left */}
           <div className="relative aspect-[3/4] overflow-hidden rounded-[12px] bg-surface-light">
@@ -56,7 +56,7 @@ export default function HomeManifest() {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-60px" }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.5, delay: 0.15 }}
         >
           {POINTS.map((point) => (

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0 },
 };
 
@@ -16,8 +16,8 @@ export default function AboutClosing() {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 0.5 }}
         >
           Love or money
         </motion.h2>
@@ -27,8 +27,8 @@ export default function AboutClosing() {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6, delay: 0.12 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 0.5, delay: 0.08 }}
         >
           <p>
             On a business website, you rarely read about love. Yet that is

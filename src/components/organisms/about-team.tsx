@@ -63,7 +63,7 @@ const PLACEHOLDER_TEAM: TeamMember[] = [
 ];
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0 },
 };
 
@@ -99,7 +99,7 @@ export default function AboutTeam({ team }: Props) {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.5 }}
         >
           Our Team
@@ -113,8 +113,8 @@ export default function AboutTeam({ team }: Props) {
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.4, delay: 0.06 * i }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.5, delay: 0.08 * i }}
             >
               {/* Portrait */}
               <div className="relative aspect-[4/3] overflow-hidden rounded-t-[12px] bg-surface-light">

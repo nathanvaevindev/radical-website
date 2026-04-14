@@ -28,7 +28,7 @@ const BLOCKS = [
 ];
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0 },
 };
 
@@ -41,7 +41,7 @@ export default function CompaniesProfiles() {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.5 }}
         >
           We don&apos;t send CVs. We deliver matches.
@@ -52,7 +52,7 @@ export default function CompaniesProfiles() {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           We don&apos;t work with standard vacancy profiles and CVs. We build
@@ -67,8 +67,8 @@ export default function CompaniesProfiles() {
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.4, delay: 0.08 * i }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.5, delay: 0.08 * i }}
             >
               <h3 className="font-heading text-lg font-bold text-heading">
                 {block.title}

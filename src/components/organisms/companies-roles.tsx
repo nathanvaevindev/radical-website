@@ -93,7 +93,7 @@ const PLACEHOLDER_ROLES: (Role & { intro: string })[] = [
 ];
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0 },
 };
 
@@ -115,7 +115,7 @@ export default function CompaniesRoles({ roles }: Props) {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.5 }}
         >
           Roles We Place
@@ -128,7 +128,7 @@ export default function CompaniesRoles({ roles }: Props) {
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-60px" }}
+            viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <div className="rounded-[12px] border border-surface-border bg-surface p-8 lg:p-10">
@@ -197,7 +197,7 @@ export default function CompaniesRoles({ roles }: Props) {
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-60px" }}
+            viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.5 }}
           >
             <nav aria-label="Available roles">
