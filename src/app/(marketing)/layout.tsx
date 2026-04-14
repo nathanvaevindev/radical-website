@@ -1,9 +1,17 @@
-// Marketing layout — wraps all public pages with shared Header + Footer.
-// Header and Footer components will be added here in the next phase.
+import Header from "@/components/organisms/header";
+import Footer from "@/components/organisms/footer";
+
 export default function MarketingLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <>
+      <Header />
+      {/* Offset for the fixed header height */}
+      <div className="pt-18">{children}</div>
+      <Footer />
+    </>
+  );
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import HeroHome from "@/components/organisms/hero-home";
 
 export const metadata: Metadata = {
   title:
@@ -8,5 +9,9 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  return <main />;
+  return (
+    <main>
+      <HeroHome />
+    </main>
+  );
 }
