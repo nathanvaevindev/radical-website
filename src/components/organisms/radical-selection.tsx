@@ -2,12 +2,15 @@
 
 import { motion } from "framer-motion";
 import Accordion from "@/components/molecules/accordion";
+import StepTimeline from "@/components/molecules/step-timeline";
 import Button from "@/components/atoms/button";
 
 const JOURNEY_STEPS = [
-  "Do the APAC test",
-  "In-depth personal and professional assessment with our recruiter",
-  "Enter the Radical Community",
+  { title: "Do the APAC test" },
+  {
+    title: "In-depth personal and professional assessment with our recruiter",
+  },
+  { title: "Enter the Radical Community" },
 ];
 
 const GAINS = [
@@ -53,7 +56,7 @@ export default function RadicalSelection() {
     <section className="py-12 lg:py-16">
       <div className="mx-auto max-w-[1280px] px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:gap-16">
-          {/* Left — Journey steps */}
+          {/* Left — Journey steps timeline */}
           <motion.div
             variants={fadeUp}
             initial="hidden"
@@ -61,18 +64,7 @@ export default function RadicalSelection() {
             viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.5 }}
           >
-            <ol className="flex flex-col gap-8">
-              {JOURNEY_STEPS.map((step, i) => (
-                <li key={step} className="flex items-start gap-6">
-                  <span className="font-heading text-5xl font-bold leading-none text-smaragd">
-                    {i + 1}
-                  </span>
-                  <span className="pt-1 font-heading text-xl text-heading md:text-2xl">
-                    {step}
-                  </span>
-                </li>
-              ))}
-            </ol>
+            <StepTimeline steps={JOURNEY_STEPS} />
           </motion.div>
 
           {/* Right — As a Radical you get: accordion */}

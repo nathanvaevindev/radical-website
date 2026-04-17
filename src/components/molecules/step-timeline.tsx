@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 type Step = {
   title: string;
-  description: string;
+  description?: string;
 };
 
 type StepTimelineProps = {
@@ -44,7 +44,9 @@ export default function StepTimeline({ steps }: StepTimelineProps) {
             <p className="font-heading text-lg font-bold text-heading">
               {step.title}
             </p>
-            <p className="mt-1 text-sm text-body">{step.description}</p>
+            {step.description && (
+              <p className="mt-1 text-sm text-body">{step.description}</p>
+            )}
           </div>
         </motion.div>
       ))}

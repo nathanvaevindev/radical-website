@@ -11,8 +11,8 @@ export default function Logo() {
       <Image
         src="/logo.svg"
         alt="Radical Recruitment"
-        width={171}
-        height={25}
+        width={291}
+        height={43}
         priority
       />
     </Link>
