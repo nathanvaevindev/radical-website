@@ -9,7 +9,7 @@ const PLACEHOLDER_TEAM: TeamMember[] = [
   {
     id: "1",
     name: "Nelieke Wismans",
-    role: "Founder",
+    role: "Co-founder",
     photoUrl: "/nelieke.jpeg",
     bio: null,
     linkedinUrl: "https://www.linkedin.com/in/neliekewismans/",
@@ -18,7 +18,7 @@ const PLACEHOLDER_TEAM: TeamMember[] = [
   {
     id: "2",
     name: "Oscar Voskuil",
-    role: "Co-founder",
+    role: "Founder",
     photoUrl: "/oscar.png",
     bio: null,
     linkedinUrl: "https://www.linkedin.com/in/oscarvoskuil/",
@@ -27,16 +27,16 @@ const PLACEHOLDER_TEAM: TeamMember[] = [
   {
     id: "3",
     name: "Vincent Zepeda",
-    role: "Digital Transformation Specialist",
+    role: "Tech Lead / Digital Transformation Specialist",
     photoUrl: "/Vincent.jpeg",
-    bio: "Connects ambitious professionals with companies that match their values and vision.",
+    bio: "Builds the recruit stack that every recruiter wishes for.",
     linkedinUrl: null,
     sortOrder: 3,
   },
   {
     id: "4",
     name: "Nathan van Veen",
-    role: "Digital Transformation Specialist",
+    role: "Community Lead / Head of Growth",
     photoUrl: "/Nathan.jpeg",
     bio: "Builds the spaces where AI-natives grow, learn, and find their people.",
     linkedinUrl: null,

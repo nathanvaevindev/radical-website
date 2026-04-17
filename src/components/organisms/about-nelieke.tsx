@@ -4,7 +4,8 @@ export default function AboutNelieke() {
   return (
     <FounderBlock
       name="Nelieke Wismans"
-      title="Founder of Radical"
+      title="Co-founder of Radical"
+      email="nelieke@radicalrecruitment.ai"
       quote="When you are connected to yourself, you can build the future with humanity in mind."
       imageSrc="/nelieke.jpeg"
       paragraphs={[

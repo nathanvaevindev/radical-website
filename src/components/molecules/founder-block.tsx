@@ -9,6 +9,7 @@ type FounderBlockProps = {
   quote: string;
   paragraphs: string[];
   imageSrc: string;
+  email?: string;
   flipped?: boolean;
 };
 
@@ -23,6 +24,7 @@ export default function FounderBlock({
   quote,
   paragraphs,
   imageSrc,
+  email,
   flipped = false,
 }: FounderBlockProps) {
   const portrait = (
@@ -66,6 +68,14 @@ export default function FounderBlock({
       <div className="mt-8">
         <p className="font-heading text-lg font-bold text-heading">{name}</p>
         <p className="text-sm text-muted">{title}</p>
+        {email && (
+          <a
+            href={`mailto:${email}`}
+            className="mt-1 inline-block text-sm text-smaragd transition-colors duration-150 hover:text-smaragd-light"
+          >
+            {email}
+          </a>
+        )}
       </div>
     </motion.div>
   );
