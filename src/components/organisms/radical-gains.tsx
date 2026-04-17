@@ -54,7 +54,7 @@ export default function RadicalGains() {
           viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.5 }}
         >
-          As a Radical you gain
+          As a Radical you get:
         </motion.h2>
 
         <motion.div

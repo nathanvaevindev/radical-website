@@ -1,25 +1,45 @@
 "use client";
 
 import { motion } from "framer-motion";
-import StepTimeline from "@/components/molecules/step-timeline";
+import Accordion from "@/components/molecules/accordion";
+import Button from "@/components/atoms/button";
 
-const STEPS = [
+const JOURNEY_STEPS = [
+  "Do the APAC test",
+  "In-depth personal and professional assessment with our recruiter",
+  "Enter the Radical Community",
+];
+
+const GAINS = [
   {
-    title: "Applications arrive",
-    description: "Sourcing via network and community",
+    title: "Personal & professional 1-on-1 coaching",
+    content: [
+      "Monthly 1-on-1 sessions with a dedicated coach",
+      "Honest, direct feedback on your growth and decisions",
+      "Career strategy tailored to your ambitions",
+      "A recruiter who stays after placement, not disappears",
+      "Focus on long-term fit, not short-term placement",
+    ],
   },
   {
-    title: "APAC test",
-    description: "Candidates complete the APAC assessment",
+    title: "Peer-to-peer learning & community events",
+    content: [
+      "Access to a curated network of top AI professionals",
+      "Peer-to-peer learning across companies and domains",
+      "Community events designed for real connection and growth",
+      "Exchange of ideas, challenges, and real-world experience",
+      "A space where you stay human in a high-tech world",
+    ],
   },
   {
-    title: "Human assessment",
-    description:
-      "Evaluation on human qualities: adaptability, ethics, character",
-  },
-  {
-    title: "Joins the Radical community",
-    description: "Candidate enters the community",
+    title: "Continuous development",
+    content: [
+      "Ongoing learning through Radical Academy",
+      "Masterclasses, sessions, and practical learning formats",
+      "Stay ahead of AI developments instead of catching up",
+      "Structured growth alongside your career path",
+      "Development focused on both technical and human skills",
+    ],
   },
 ];
 
@@ -31,40 +51,64 @@ const fadeUp = {
 export default function RadicalSelection() {
   return (
     <section className="py-12 lg:py-16">
-      <div className="mx-auto grid max-w-[1280px] gap-12 px-6 md:grid-cols-2 lg:gap-16 lg:px-8">
-        {/* Left — Introductory text */}
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.15 }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="font-heading text-3xl font-bold leading-snug text-heading md:text-4xl">
-            How Radicals Are Selected
-          </h2>
-          <div className="mt-6 flex flex-col gap-4 text-lg leading-relaxed text-body">
-            <p>
-              At Radical Recruitment, it&apos;s about who you are, not just
-              what&apos;s on your r&eacute;sum&eacute;.
-            </p>
-            <p>
-              A lasting career in AI begins with personality and ambition.
-              Radical selects candidates before a role is found, so companies
-              already know someone is exceptional before the first conversation.
-            </p>
-          </div>
-        </motion.div>
+      <div className="mx-auto max-w-[1280px] px-6 lg:px-8">
+        <div className="grid gap-12 md:grid-cols-2 lg:gap-16">
+          {/* Left — Journey steps */}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{ duration: 0.5 }}
+          >
+            <ol className="flex flex-col gap-8">
+              {JOURNEY_STEPS.map((step, i) => (
+                <li key={step} className="flex items-start gap-6">
+                  <span className="font-heading text-5xl font-bold leading-none text-smaragd">
+                    {i + 1}
+                  </span>
+                  <span className="pt-1 font-heading text-xl text-heading md:text-2xl">
+                    {step}
+                  </span>
+                </li>
+              ))}
+            </ol>
+          </motion.div>
 
-        {/* Right — Timeline */}
+          {/* Right — As a Radical you get: accordion */}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <h2 className="font-heading text-3xl font-bold text-heading md:text-4xl">
+              As a Radical you get:
+            </h2>
+            <div className="mt-8">
+              <Accordion items={GAINS} defaultOpen={0} />
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Full-width Coral CTA */}
         <motion.div
+          className="mt-12 lg:mt-16"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.15 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          transition={{ duration: 0.5, delay: 0.15 }}
         >
-          <StepTimeline steps={STEPS} />
+          <Button
+            href="https://radicalnetwork.nl"
+            variant="coral"
+            size="md"
+            fullWidth
+          >
+            Start your journey
+          </Button>
         </motion.div>
       </div>
     </section>

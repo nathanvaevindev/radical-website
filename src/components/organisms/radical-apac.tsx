@@ -100,12 +100,9 @@ export default function RadicalApac() {
           viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <Button href="/for-companies">Hire a Radical</Button>
+          <Button href="https://radicalnetwork.nl">Start your journey here</Button>
           <Button href="/about" variant="secondary">
             Read all about it here
-          </Button>
-          <Button href="https://radicalnetwork.nl" variant="ghost">
-            Start your journey here
           </Button>
         </motion.div>
       </div>

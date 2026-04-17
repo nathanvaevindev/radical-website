@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { type ComponentPropsWithoutRef } from "react";
 
-type Variant = "primary" | "secondary" | "ghost" | "coral";
+type Variant = "primary" | "secondary" | "ghost" | "coral" | "dark";
 type Size = "sm" | "md";
 
 type BaseProps = {
   variant?: Variant;
   size?: Size;
+  fullWidth?: boolean;
 };
 
 type ButtonAsLink = BaseProps &
@@ -28,6 +29,8 @@ const variantStyles: Record<Variant, string> = {
     "bg-transparent text-heading hover:bg-surface-light active:scale-95",
   coral:
     "bg-coral text-white hover:bg-coral-dark active:scale-95 shadow-[0_0_0_0_transparent] hover:shadow-glow-coral",
+  dark:
+    "bg-black text-white hover:bg-black/80 active:scale-95",
 };
 
 const sizeStyles: Record<Size, string> = {
@@ -40,20 +43,21 @@ function isLinkProps(props: ButtonProps): props is ButtonAsLink {
 }
 
 export default function Button(props: ButtonProps) {
-  const { variant = "primary", size = "md" } = props;
+  const { variant = "primary", size = "md", fullWidth = false } = props;
 
   const classes = [
-    "inline-flex items-center justify-center rounded-full font-semibold transition-all duration-150",
+    fullWidth ? "flex w-full" : "inline-flex",
+    "items-center justify-center rounded-full font-semibold transition-all duration-150",
     "focus-visible:ring-2 focus-visible:ring-smaragd focus-visible:ring-offset-2 focus-visible:ring-offset-page",
     variantStyles[variant],
     sizeStyles[size],
   ].join(" ");
 
   if (isLinkProps(props)) {
-    const { variant: _v, size: _s, ...linkRest } = props;
+    const { variant: _v, size: _s, fullWidth: _f, ...linkRest } = props;
     return <Link className={classes} {...linkRest} />;
   }
 
-  const { variant: _v, size: _s, ...buttonRest } = props;
+  const { variant: _v, size: _s, fullWidth: _f, ...buttonRest } = props;
   return <button className={classes} {...buttonRest} />;
 }

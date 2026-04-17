@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import RadicalHero from "@/components/organisms/radical-hero";
+import RadicalIntro from "@/components/organisms/radical-intro";
 import RadicalSelection from "@/components/organisms/radical-selection";
-import RadicalGains from "@/components/organisms/radical-gains";
-import RadicalTestimonials from "@/components/organisms/radical-testimonials";
 import RadicalApac from "@/components/organisms/radical-apac";
 import RadicalFaq from "@/components/organisms/radical-faq";
 
@@ -16,9 +15,8 @@ export default function BecomeARadicalPage() {
   return (
     <main>
       <RadicalHero />
+      <RadicalIntro />
       <RadicalSelection />
-      <RadicalGains />
-      <RadicalTestimonials />
       <RadicalApac />
       <RadicalFaq />
     </main>
