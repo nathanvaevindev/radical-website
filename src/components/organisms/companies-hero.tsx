@@ -12,19 +12,24 @@ export default function CompaniesHero() {
     <section className="py-12 lg:py-16">
       <div className="mx-auto max-w-[1280px] px-6 lg:px-8">
         <motion.h1
-          className="max-w-4xl font-courier text-3xl font-bold leading-snug text-heading md:text-4xl lg:text-[2.75rem]"
+          className="mx-auto max-w-4xl text-center font-courier text-3xl font-bold leading-snug text-heading md:text-4xl lg:text-[2.75rem]"
           variants={fadeUp}
           initial="hidden"
           animate="visible"
           transition={{ duration: 0.6 }}
         >
-          The real power of AI is not in the code, but in the human conscience
-          behind it. We provide selected professionals who ensure your
-          technology works, continues to grow, compliant with the EU AI act.
+          <span className="block">
+            The real power of AI is not in the code, but in the human conscience
+            behind it.
+          </span>
+          <span className="mt-8 block">
+            We provide selected professionals who ensure your technology works,
+            continues to grow, compliant with the EU AI act.
+          </span>
         </motion.h1>
 
         <motion.p
-          className="mt-12 max-w-3xl text-lg leading-relaxed text-body lg:mt-16"
+          className="mx-auto mt-12 max-w-3xl text-center text-lg leading-relaxed text-body lg:mt-16"
           variants={fadeUp}
           initial="hidden"
           animate="visible"

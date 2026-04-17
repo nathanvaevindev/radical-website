@@ -157,7 +157,6 @@ export default function AboutHero() {
                   type="submit"
                   variant="coral"
                   disabled={isSubmitting}
-                  fullWidth
                 >
                   {isSubmitting ? "Sending…" : "Send message"}
                 </Button>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import HeroHome from "@/components/organisms/hero-home";
 import HomeApac from "@/components/organisms/home-apac";
 import HomeSplit from "@/components/organisms/home-split";
+import HomePhotoSlider from "@/components/organisms/home-photo-slider";
 import HomeCommunity from "@/components/organisms/home-community";
 import HomeFounders from "@/components/organisms/home-founders";
 export const metadata: Metadata = {
@@ -17,6 +18,7 @@ export default function HomePage() {
       <HeroHome />
       <HomeApac />
       <HomeSplit />
+      <HomePhotoSlider />
       <HomeCommunity />
       <HomeFounders />
     </main>

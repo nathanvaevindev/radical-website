@@ -56,7 +56,7 @@ export default function RadicalSelection() {
     <section className="py-12 lg:py-16">
       <div className="mx-auto max-w-[1280px] px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:gap-16">
-          {/* Left — Journey steps timeline */}
+          {/* Left — Path heading + journey timeline + CTA */}
           <motion.div
             variants={fadeUp}
             initial="hidden"
@@ -64,7 +64,15 @@ export default function RadicalSelection() {
             viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.5 }}
           >
-            <StepTimeline steps={JOURNEY_STEPS} />
+            <h2 className="font-heading text-3xl font-bold text-heading md:text-4xl">
+              Your path in.
+            </h2>
+            <div className="mt-8">
+              <StepTimeline steps={JOURNEY_STEPS} />
+            </div>
+            <div className="mt-2">
+              <Button href="https://radicalnetwork.nl">Start your journey</Button>
+            </div>
           </motion.div>
 
           {/* Right — As a Radical you get: accordion */}
@@ -83,25 +91,6 @@ export default function RadicalSelection() {
             </div>
           </motion.div>
         </div>
-
-        {/* Full-width Coral CTA */}
-        <motion.div
-          className="mt-12 lg:mt-16"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.15 }}
-          transition={{ duration: 0.5, delay: 0.15 }}
-        >
-          <Button
-            href="https://radicalnetwork.nl"
-            variant="coral"
-            size="md"
-            fullWidth
-          >
-            Start your journey
-          </Button>
-        </motion.div>
       </div>
     </section>
   );

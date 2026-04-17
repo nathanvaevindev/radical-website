@@ -81,25 +81,26 @@ export default function HomeCommunity({ events }: Props) {
           The Radical Community
         </motion.h2>
 
-        <motion.p
-          className="mt-6 max-w-3xl text-lg leading-relaxed text-body"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.15 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
-          Join a curated ecosystem where expertise, ethics and people meet.
-          Together, we are building a foundation for responsible AI, ensuring
-          that technology in Europe remains firmly rooted in human values.
-        </motion.p>
-
         {/* Two-column layout */}
         <div className="mt-14 grid gap-8 md:grid-cols-2 lg:gap-12">
-          {/* Left — Events + Values */}
+          {/* Left — Intro + Events + Values */}
           <div>
             <motion.p
-              className="text-xs font-semibold uppercase tracking-wider text-muted"
+              className="text-lg leading-relaxed text-body"
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              Join a curated ecosystem where expertise, ethics and people meet.
+              Together, we are building a foundation for responsible AI,
+              ensuring that technology in Europe remains firmly rooted in human
+              values.
+            </motion.p>
+
+            <motion.p
+              className="mt-10 text-xs font-semibold uppercase tracking-wider text-muted"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"

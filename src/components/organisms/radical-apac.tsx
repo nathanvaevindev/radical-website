@@ -7,29 +7,33 @@ const APAC_ITEMS = [
   {
     letter: "A",
     title: "Adaptability",
+    tagline: "Flexibility in a changing world",
     description:
-      "Thrives in ambiguity and change. Learns fast, adapts quickly, and remains effective as environments evolve.",
+      "How fast do you adapt? In the AI sector, the half-life of knowledge is months. Adaptability measures your ability to let go of outdated methods and switch between different levels of abstraction.",
     color: "text-apac-adaptability",
   },
   {
     letter: "P",
     title: "Personality",
+    tagline: "Authenticity as the most powerful instrument",
     description:
-      "Brings ownership, energy, and initiative. Communicates clearly and contributes actively within teams.",
+      "The Prompt Engineer of the Soul. Personality measures analytical ability, creativity, curiosity and growth mindset. Do you dare to look beyond the data?",
     color: "text-apac-personality",
   },
   {
     letter: "A",
     title: "Awareness",
+    tagline: "The moral compass of AI",
     description:
-      "Understands context beyond the task. Acts with ethical responsibility and sees the broader impact of decisions.",
+      "Awareness measures your EQ, contextual intelligence and ethical awareness. Do you dare to say \u2018no\u2019 to unethical solutions? Crucial for EU AI Act compliance.",
     color: "text-apac-awareness",
   },
   {
     letter: "C",
     title: "Connection",
+    tagline: "Human connection is becoming increasingly rare",
     description:
-      "Builds strong relationships across teams and stakeholders. Collaborates effectively and aligns with people and environment.",
+      "Connection measures your social connection with yourself, society and your community. Self-reflection, team connection and inherent risk awareness. A Radical in a team is an ethical guardrail.",
     color: "text-apac-connection",
   },
 ];
@@ -51,7 +55,7 @@ export default function RadicalApac() {
           viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.5 }}
         >
-          The APAC Framework
+          The APAC-framework, our proprietary selection method.
         </motion.h2>
 
         <motion.p
@@ -87,7 +91,10 @@ export default function RadicalApac() {
                   {item.title}
                 </span>
               </div>
-              <p className="mt-2 text-body">{item.description}</p>
+              <p className="mt-1 text-base italic text-muted">
+                {item.tagline}
+              </p>
+              <p className="mt-3 text-body">{item.description}</p>
             </motion.div>
           ))}
         </div>

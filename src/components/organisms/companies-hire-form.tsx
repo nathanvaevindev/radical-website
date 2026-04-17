@@ -40,7 +40,7 @@ export default function CompaniesHireForm() {
         <div className="grid items-start gap-12 md:grid-cols-2 lg:gap-16">
           {/* Left — Nelieke portrait */}
           <motion.div
-            className="relative aspect-[4/5] overflow-hidden rounded-[12px] bg-surface-light"
+            className="relative mx-auto aspect-[4/5] w-1/2 overflow-hidden rounded-[12px] bg-surface-light"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
@@ -52,7 +52,7 @@ export default function CompaniesHireForm() {
               alt="Portrait of Nelieke Wismans"
               fill
               className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 768px) 50vw, 25vw"
             />
           </motion.div>
 

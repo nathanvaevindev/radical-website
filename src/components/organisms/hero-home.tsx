@@ -74,7 +74,7 @@ export default function HeroHome() {
           <Button href="/for-companies" variant="coral" size="md">
             Find a Radical
           </Button>
-          <Button href="/become-a-radical" variant="secondary" size="md">
+          <Button href="/become-a-radical" size="md">
             Become a Radical
           </Button>
         </motion.div>

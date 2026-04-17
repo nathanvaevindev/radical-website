@@ -47,7 +47,7 @@ export default function HomeSplit() {
           </div>
 
           <div className="mt-10">
-            <Button href="/become-a-radical" variant="coral">Become a Radical</Button>
+            <Button href="/become-a-radical">Become a Radical</Button>
           </div>
         </motion.div>
 
@@ -87,7 +87,7 @@ export default function HomeSplit() {
           </div>
 
           <div className="mt-10">
-            <Button href="/for-companies">Hire a Radical</Button>
+            <Button href="/for-companies" variant="coral">Hire a Radical</Button>
           </div>
         </motion.div>
       </div>

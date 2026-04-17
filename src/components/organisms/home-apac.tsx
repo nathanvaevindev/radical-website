@@ -41,7 +41,7 @@ const fadeUp = {
 
 export default function HomeApac() {
   return (
-    <section className="py-12 lg:py-16">
+    <section className="pt-6 pb-12 lg:pt-8 lg:pb-16">
       <div className="mx-auto max-w-[720px] px-6 lg:px-8">
         {/* Header */}
         <motion.h2
@@ -52,7 +52,7 @@ export default function HomeApac() {
           viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.5 }}
         >
-          APAC, our proprietary selection.
+          The APAC-framework, our proprietary selection method.
         </motion.h2>
 
         <motion.p
@@ -105,7 +105,7 @@ export default function HomeApac() {
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           <Button href="/for-companies" variant="coral">Hire a Radical</Button>
-          <Button href="https://radicalnetwork.nl" variant="secondary">
+          <Button href="https://radicalnetwork.nl">
             Apply to the program
           </Button>
         </motion.div>
