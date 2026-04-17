@@ -3,7 +3,7 @@ import HeroHome from "@/components/organisms/hero-home";
 import HomeApac from "@/components/organisms/home-apac";
 import HomeSplit from "@/components/organisms/home-split";
 import HomeCommunity from "@/components/organisms/home-community";
-import HomeManifest from "@/components/organisms/home-manifest";
+import HomeFounders from "@/components/organisms/home-founders";
 export const metadata: Metadata = {
   title:
     "Radical Recruitment — AI is everywhere. The human factor is rare.",
@@ -18,7 +18,7 @@ export default function HomePage() {
       <HomeApac />
       <HomeSplit />
       <HomeCommunity />
-      <HomeManifest />
+      <HomeFounders />
     </main>
   );
 }

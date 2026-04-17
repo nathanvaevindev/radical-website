@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Button from "@/components/atoms/button";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -55,6 +56,20 @@ export default function AboutClosing() {
         >
           Join the movement. Hire a Radical. Be a Radical.
         </motion.h1>
+
+        <motion.div
+          className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 0.5, delay: 0.25 }}
+        >
+          <Button href="/for-companies" variant="coral">
+            Hire a Radical
+          </Button>
+          <Button href="/become-a-radical">Become a Radical</Button>
+        </motion.div>
       </div>
     </section>
   );
