@@ -42,16 +42,6 @@ export default function HeroHome() {
 
       {/* Content — pointer-events-none so cursor passes through to canvas */}
       <div className="pointer-events-none relative z-10 mx-auto flex max-w-[1280px] flex-col items-center px-6 text-center lg:px-8">
-        <motion.p
-          className="mb-5 text-sm font-semibold uppercase tracking-widest text-smaragd"
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          custom={0}
-        >
-          Radical Recruitment
-        </motion.p>
-
         <motion.h1
           className="mx-auto max-w-4xl font-heading text-5xl font-bold leading-[1.08] text-heading sm:text-6xl md:text-7xl lg:text-[5.5rem]"
           variants={fadeUp}

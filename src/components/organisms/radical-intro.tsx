@@ -21,7 +21,7 @@ export default function RadicalIntro() {
         >
           At Radical Recruitment, it&apos;s about who you are, not just what&apos;s
           on your r&eacute;sum&eacute;. Our Radical Community consists of
-          candidates that stand out. Every candidate is assessed using APAC —
+          candidates that stand out. Every candidate is assessed using APAC,
           our proprietary framework built around the human factors that predict
           success in AI roles. So companies already know you are exceptional
           before the first conversation. Join our Radical Community; it is more
