@@ -29,7 +29,7 @@ export default function Footer() {
               aria-label="Radical Recruitment — Home"
             >
               <Image
-                src="/logo.png"
+                src="/logo 1.png"
                 alt=""
                 width={28}
                 height={28}

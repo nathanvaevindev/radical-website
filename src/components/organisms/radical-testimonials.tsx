@@ -9,7 +9,7 @@ const PLACEHOLDER: Testimonial[] = [
   {
     id: "1",
     quote:
-      "Radical didn't just find me a role — they invested in who I am. The coaching and community changed my career trajectory.",
+      "Radical didn't just find me a role; they invested in who I am. The coaching and community changed my career trajectory.",
     name: "Sophie de Vries",
     role: "AI Engineer",
     location: "Amsterdam",
@@ -39,7 +39,7 @@ const PLACEHOLDER: Testimonial[] = [
   {
     id: "4",
     quote:
-      "I was skeptical of recruitment agencies. Radical proved me wrong — they care about long-term fit, not quick placements.",
+      "I was skeptical of recruitment agencies. Radical proved me wrong; they care about long-term fit, not quick placements.",
     name: "Thomas Visser",
     role: "LLM Specialist",
     location: "The Hague",
@@ -69,7 +69,7 @@ const PLACEHOLDER: Testimonial[] = [
   {
     id: "7",
     quote:
-      "Being selected through APAC felt meaningful. It's not about keywords on a CV — it's about who you really are.",
+      "Being selected through APAC felt meaningful. It's not about keywords on a CV; it's about who you really are.",
     name: "Nina Hendriks",
     role: "Data Scientist",
     location: "Amsterdam",
@@ -174,7 +174,7 @@ export default function RadicalTestimonials({ testimonials }: Props) {
 
   return (
     <motion.section
-      className="overflow-hidden py-24 lg:py-32"
+      className="overflow-hidden py-12 lg:py-16"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}

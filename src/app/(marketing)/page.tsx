@@ -4,8 +4,6 @@ import HomeApac from "@/components/organisms/home-apac";
 import HomeSplit from "@/components/organisms/home-split";
 import HomeCommunity from "@/components/organisms/home-community";
 import HomeManifest from "@/components/organisms/home-manifest";
-import HomeCta from "@/components/organisms/home-cta";
-
 export const metadata: Metadata = {
   title:
     "Radical Recruitment — AI is everywhere. The human factor is rare.",
@@ -21,7 +19,6 @@ export default function HomePage() {
       <HomeSplit />
       <HomeCommunity />
       <HomeManifest />
-      <HomeCta />
     </main>
   );
 }

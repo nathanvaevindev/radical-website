@@ -53,12 +53,6 @@ function formatDate(dateStr: string): { day: string; month: string } {
   };
 }
 
-const COMMUNITY_VALUES = [
-  "We learn together",
-  "We make each other better",
-  "We build the foundation for ethical AI in Europe",
-];
-
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0 },
@@ -73,7 +67,7 @@ export default function HomeCommunity({ events }: Props) {
     events && events.length > 0 ? events.slice(0, 5) : PLACEHOLDER_EVENTS;
 
   return (
-    <section className="py-24 lg:py-32">
+    <section className="py-12 lg:py-16">
       <div className="mx-auto max-w-[1280px] px-6 lg:px-8">
         {/* Header */}
         <motion.h2
@@ -95,10 +89,9 @@ export default function HomeCommunity({ events }: Props) {
           viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          Our community is built on a curated selection process, centered around
-          our proprietary APAC framework and individual assessments. This ensures
-          that every member brings not only technical excellence but also the
-          human-centric qualities essential for leadership in AI.
+          Join a curated ecosystem where expertise, ethics and people meet.
+          Together, we are building a foundation for responsible AI, ensuring
+          that technology in Europe remains firmly rooted in human values.
         </motion.p>
 
         {/* Two-column layout */}
@@ -157,25 +150,6 @@ export default function HomeCommunity({ events }: Props) {
                 );
               })}
             </div>
-
-            {/* Community values */}
-            <motion.ul
-              className="mt-8 flex flex-col gap-3"
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.15 }}
-              transition={{ duration: 0.5, delay: 0.15 }}
-            >
-              {COMMUNITY_VALUES.map((value) => (
-                <li key={value} className="flex gap-3 text-body">
-                  <span className="mt-0.5 text-smaragd" aria-hidden="true">
-                    ✔
-                  </span>
-                  {value}
-                </li>
-              ))}
-            </motion.ul>
 
             {/* CTA */}
             <motion.div

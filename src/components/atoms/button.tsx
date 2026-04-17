@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { type ComponentPropsWithoutRef } from "react";
 
-type Variant = "primary" | "secondary" | "ghost";
+type Variant = "primary" | "secondary" | "ghost" | "coral";
 type Size = "sm" | "md";
 
 type BaseProps = {
@@ -26,6 +26,8 @@ const variantStyles: Record<Variant, string> = {
     "bg-surface-light text-heading hover:bg-surface-border active:scale-95",
   ghost:
     "bg-transparent text-heading hover:bg-surface-light active:scale-95",
+  coral:
+    "bg-coral text-white hover:bg-coral-dark active:scale-95 shadow-[0_0_0_0_transparent] hover:shadow-glow-coral",
 };
 
 const sizeStyles: Record<Size, string> = {

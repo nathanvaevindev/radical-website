@@ -9,7 +9,7 @@ const fadeUp = {
 
 export default function AboutHero() {
   return (
-    <section className="py-32 lg:py-44">
+    <section className="py-16 lg:py-20">
       <div className="mx-auto max-w-[720px] px-6 text-center lg:px-8">
         <motion.h1
           className="font-heading text-6xl font-bold text-heading md:text-7xl lg:text-8xl"

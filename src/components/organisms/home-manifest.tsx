@@ -3,12 +3,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const POINTS = [
-  "30+ years of experience and network",
-  "Strong connection with Gen Z and AI natives",
-  "Selective entry and personal development",
-];
-
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0 },
@@ -16,7 +10,7 @@ const fadeUp = {
 
 export default function HomeManifest() {
   return (
-    <section className="py-24 lg:py-32">
+    <section className="py-12 lg:py-16">
       <div className="mx-auto max-w-[720px] px-6 lg:px-8">
         {/* Two founder portraits — no header, no captions */}
         <motion.div
@@ -50,25 +44,6 @@ export default function HomeManifest() {
           </div>
         </motion.div>
 
-        {/* Checklist — centred, typographically light */}
-        <motion.ul
-          className="mt-12 flex flex-col items-center gap-3 lg:mt-16"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.15 }}
-          transition={{ duration: 0.5, delay: 0.15 }}
-        >
-          {POINTS.map((point) => (
-            <li
-              key={point}
-              className="flex gap-2.5 text-body"
-            >
-              <span className="text-smaragd" aria-hidden="true">✔</span>
-              {point}
-            </li>
-          ))}
-        </motion.ul>
       </div>
     </section>
   );

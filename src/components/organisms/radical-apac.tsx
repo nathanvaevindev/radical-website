@@ -41,7 +41,7 @@ const fadeUp = {
 
 export default function RadicalApac() {
   return (
-    <section className="py-24 lg:py-32">
+    <section className="py-12 lg:py-16">
       <div className="mx-auto max-w-[720px] px-6 lg:px-8">
         <motion.h2
           className="font-heading text-4xl font-bold text-heading md:text-5xl"

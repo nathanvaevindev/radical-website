@@ -6,6 +6,7 @@ import CompaniesRoles from "@/components/organisms/companies-roles";
 import CompaniesApac from "@/components/organisms/companies-apac";
 import CompaniesMatching from "@/components/organisms/companies-matching";
 import CompaniesProfiles from "@/components/organisms/companies-profiles";
+import CompaniesTariffs from "@/components/organisms/companies-tariffs";
 import CompaniesHireForm from "@/components/organisms/companies-hire-form";
 
 export const metadata: Metadata = {
@@ -24,6 +25,7 @@ export default function ForCompaniesPage() {
       <CompaniesApac />
       <CompaniesMatching />
       <CompaniesProfiles />
+      <CompaniesTariffs />
       <CompaniesHireForm />
     </main>
   );

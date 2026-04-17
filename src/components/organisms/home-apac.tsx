@@ -29,7 +29,7 @@ const APAC_ITEMS = [
     letter: "C",
     title: "Connection",
     description:
-      "Builds strong relationships across teams and stakeholders. Collaborates effectively and aligns with people and environment.",
+      "Stays grounded and connects with inner values, your team and the world around oneself, peers, and the organizational mission.",
     color: "text-apac-connection",
   },
 ];
@@ -41,7 +41,7 @@ const fadeUp = {
 
 export default function HomeApac() {
   return (
-    <section className="py-24 lg:py-32">
+    <section className="py-12 lg:py-16">
       <div className="mx-auto max-w-[720px] px-6 lg:px-8">
         {/* Header */}
         <motion.h2
@@ -52,7 +52,7 @@ export default function HomeApac() {
           viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.5 }}
         >
-          The APAC Framework
+          APAC, our proprietary selection.
         </motion.h2>
 
         <motion.p
@@ -63,8 +63,9 @@ export default function HomeApac() {
           viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          We don&apos;t select on certifications or years of experience. We
-          assess the human qualities that predict real-world impact. This is what
+          We don&apos;t just search for candidates; we curate and cultivate a
+          community of Radicals. We assess the human qualities that predict
+          real-world impact, with our proprietary APAC-framework. This is what
           separates good AI professionals from exceptional ones.
         </motion.p>
 
@@ -103,7 +104,7 @@ export default function HomeApac() {
           viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <Button href="/for-companies">Hire a Radical</Button>
+          <Button href="/for-companies" variant="coral">Hire a Radical</Button>
           <Button href="https://radicalnetwork.nl" variant="secondary">
             Apply to the program
           </Button>

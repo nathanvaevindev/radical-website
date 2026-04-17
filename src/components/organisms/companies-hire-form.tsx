@@ -34,7 +34,7 @@ export default function CompaniesHireForm() {
   }
 
   return (
-    <section id="hire" className="py-24 lg:py-32">
+    <section id="hire" className="py-12 lg:py-16">
       <div className="mx-auto max-w-[600px] px-6 lg:px-8">
         <motion.h2
           className="text-center font-heading text-4xl font-bold text-heading md:text-5xl"
@@ -44,19 +44,8 @@ export default function CompaniesHireForm() {
           viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.5 }}
         >
-          Hire a Radical
+          Start your search here
         </motion.h2>
-
-        <motion.p
-          className="mt-4 text-center text-lg text-body"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.15 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
-          Start your search for the right AI professional
-        </motion.p>
 
         <motion.div
           className="mt-10"
@@ -177,9 +166,7 @@ export default function CompaniesHireForm() {
               </div>
 
               <Button type="submit" disabled={isSubmitting}>
-                {isSubmitting
-                  ? "Sending…"
-                  : "We will contact you within 24 hours"}
+                {isSubmitting ? "Sending…" : "we respond within 24 hours"}
               </Button>
             </form>
           )}

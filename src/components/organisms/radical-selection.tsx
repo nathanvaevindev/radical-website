@@ -30,7 +30,7 @@ const fadeUp = {
 
 export default function RadicalSelection() {
   return (
-    <section className="py-24 lg:py-32">
+    <section className="py-12 lg:py-16">
       <div className="mx-auto grid max-w-[1280px] gap-12 px-6 md:grid-cols-2 lg:gap-16 lg:px-8">
         {/* Left — Introductory text */}
         <motion.div
@@ -50,7 +50,7 @@ export default function RadicalSelection() {
             </p>
             <p>
               A lasting career in AI begins with personality and ambition.
-              Radical selects candidates before a role is found — so companies
+              Radical selects candidates before a role is found, so companies
               already know someone is exceptional before the first conversation.
             </p>
           </div>

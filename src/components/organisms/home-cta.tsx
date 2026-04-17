@@ -10,7 +10,7 @@ const fadeUp = {
 
 export default function HomeCta() {
   return (
-    <section className="py-24 lg:py-32">
+    <section className="py-12 lg:py-16">
       <div className="mx-auto max-w-[1280px] px-6 lg:px-8">
         <motion.h2
           className="text-center font-heading text-4xl font-bold text-heading md:text-5xl"

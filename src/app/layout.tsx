@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://radicalrecruitment.com"
   ),
+  icons: {
+    icon: "/logo 1.png",
+    shortcut: "/logo 1.png",
+    apple: "/logo 1.png",
+  },
   openGraph: {
     type: "website",
     siteName: "Radical Recruitment",
@@ -44,7 +49,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@400;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@400;700&family=Courier+Prime:wght@400;700&display=swap"
           rel="stylesheet"
         />
       </head>

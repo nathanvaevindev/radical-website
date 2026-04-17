@@ -40,7 +40,7 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="flex min-h-[75dvh] items-center py-24 lg:py-32">
+    <section className="flex min-h-[75dvh] items-center py-12 lg:py-16">
       <div className="mx-auto w-full max-w-[540px] px-6 lg:px-8">
         <motion.h1
           className="font-heading text-4xl font-bold text-heading md:text-5xl"

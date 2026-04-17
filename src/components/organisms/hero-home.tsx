@@ -70,8 +70,8 @@ export default function HeroHome() {
           animate="visible"
           custom={2}
         >
-          We connect companies with elite AI professionals selected for what
-          makes them exceptional — not just their CV.
+          We connect companies with the best AI professionals selected for what
+          makes them exceptional. Not just their CV.
         </motion.p>
 
         <motion.div
@@ -81,7 +81,7 @@ export default function HeroHome() {
           animate="visible"
           custom={3}
         >
-          <Button href="/for-companies" size="md">
+          <Button href="/for-companies" variant="coral" size="md">
             Find a Radical
           </Button>
           <Button href="/become-a-radical" variant="secondary" size="md">

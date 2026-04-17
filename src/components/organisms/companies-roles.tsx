@@ -25,7 +25,7 @@ const PLACEHOLDER_ROLES: (Role & { intro: string })[] = [
     title: "AI Ethicist",
     description: "Guides responsible AI development",
     intro:
-      "AI Ethicists ensure that every system respects human values, regulatory requirements, and societal impact — from design through deployment.",
+      "AI Ethicists ensure that every system respects human values, regulatory requirements, and societal impact, from design through deployment.",
     responsibilities: [
       "Develops ethical frameworks for AI projects",
       "Audits models for bias, fairness, and transparency",
@@ -67,7 +67,7 @@ const PLACEHOLDER_ROLES: (Role & { intro: string })[] = [
     title: "ML Engineer",
     description: "Operationalises machine learning at scale",
     intro:
-      "ML Engineers own the full lifecycle of machine learning systems — from training pipelines to monitoring in production.",
+      "ML Engineers own the full lifecycle of machine learning systems, from training pipelines to monitoring in production.",
     responsibilities: [
       "Builds and maintains ML training and inference pipelines",
       "Implements monitoring, testing, and versioning for models",
@@ -108,7 +108,7 @@ export default function CompaniesRoles({ roles }: Props) {
   const active = displayRoles[activeIdx];
 
   return (
-    <section className="py-24 lg:py-32">
+    <section className="py-12 lg:py-16">
       <div className="mx-auto max-w-[1280px] px-6 lg:px-8">
         <motion.h2
           className="font-heading text-4xl font-bold text-heading md:text-5xl"
