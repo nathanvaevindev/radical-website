@@ -10,16 +10,52 @@ type Slide = {
   alt: string;
 };
 
-// Placeholder slots; swap `src` with a real image path later.
 const SLIDES: Slide[] = [
-  { id: "1", src: null, alt: "Radical community moment 1" },
-  { id: "2", src: null, alt: "Radical community moment 2" },
-  { id: "3", src: null, alt: "Radical community moment 3" },
-  { id: "4", src: null, alt: "Radical community moment 4" },
-  { id: "5", src: null, alt: "Radical community moment 5" },
-  { id: "6", src: null, alt: "Radical community moment 6" },
-  { id: "7", src: null, alt: "Radical community moment 7" },
-  { id: "8", src: null, alt: "Radical community moment 8" },
+  {
+    id: "1",
+    src: "/photos/Chinese_Dutch_woman_twenties_parc.png",
+    alt: "Radical community moment 1",
+  },
+  {
+    id: "2",
+    src: "/photos/Dutch-Turkish_woman_Campus.png",
+    alt: "Radical community moment 2",
+  },
+  {
+    id: "3",
+    src: "/photos/Dutch_man_mid_twenties_half_long_hair.png",
+    alt: "Radical community moment 3",
+  },
+  {
+    id: "4",
+    src: "/photos/Dutch_woman_early_forties.png",
+    alt: "Radical community moment 4",
+  },
+  {
+    id: "5",
+    src: "/photos/Nelieke%20werk%20blauwe%20jas.jpg",
+    alt: "Radical community moment 5",
+  },
+  {
+    id: "7",
+    src: "/photos/Oscar_chill.jpeg",
+    alt: "Radical community moment 7",
+  },
+  {
+    id: "8",
+    src: "/photos/Scandinavian_woman_ealy_thirties.png",
+    alt: "Radical community moment 8",
+  },
+  {
+    id: "9",
+    src: "/photos/South_Asian%20man.png",
+    alt: "Radical community moment 9",
+  },
+  {
+    id: "10",
+    src: "/photos/Spanish_man_mid_thirties.png",
+    alt: "Radical community moment 10",
+  },
 ];
 
 function PlaceholderIcon() {
