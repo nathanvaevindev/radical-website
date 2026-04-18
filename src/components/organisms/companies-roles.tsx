@@ -61,7 +61,7 @@ const PLACEHOLDER_ROLES: (Role & { intro: string })[] = [
       "Optimises model performance and cost efficiency",
       "Stays ahead of the rapidly evolving LLM landscape",
     ],
-    imageUrl: null,
+    imageUrl: "/photos/Dutch-Turkish_woman_Campus.png",
   },
   {
     id: "5",

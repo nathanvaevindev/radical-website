@@ -64,26 +64,24 @@ export default function CompaniesHireForm() {
             viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <h2 className="font-heading text-4xl font-bold text-heading md:text-5xl">
-              Start your search here
-            </h2>
-
-            <div className="mt-10">
-              {submitted ? (
-                <div className="rounded-[12px] border border-smaragd/20 bg-smaragd/5 p-8 text-center">
-                  <p className="font-heading text-xl font-bold text-heading">
-                    Thank you
-                  </p>
-                  <p className="mt-2 text-body">
-                    We will contact you within 24 hours.
-                  </p>
-                </div>
-              ) : (
-                <form
-                  onSubmit={handleSubmit(onSubmit)}
-                  className="flex flex-col gap-5"
-                  noValidate
-                >
+            {submitted ? (
+              <div className="rounded-[12px] border border-smaragd/20 bg-smaragd/5 p-8 text-center">
+                <p className="font-heading text-xl font-bold text-heading">
+                  Thank you
+                </p>
+                <p className="mt-2 text-body">
+                  We will contact you within 24 hours.
+                </p>
+              </div>
+            ) : (
+              <form
+                onSubmit={handleSubmit(onSubmit)}
+                className="flex flex-col gap-5 rounded-[12px] border border-smaragd p-6"
+                noValidate
+              >
+                <h2 className="font-heading text-4xl font-bold text-heading md:text-5xl">
+                  Start your search here
+                </h2>
                   {/* Name */}
                   <div>
                     <label
@@ -96,7 +94,7 @@ export default function CompaniesHireForm() {
                       id="hire-name"
                       type="text"
                       autoComplete="name"
-                      className="w-full rounded-lg border border-surface-border bg-surface-light px-3 py-2.5 text-sm text-body placeholder:text-muted focus:border-smaragd focus:outline-none"
+                      className="w-full rounded-lg border border-surface-border bg-surface-light px-3 py-2.5 text-sm text-white placeholder:text-muted focus:border-smaragd focus:outline-none"
                       {...register("name", { required: "Name is required" })}
                     />
                     {errors.name && (
@@ -118,7 +116,7 @@ export default function CompaniesHireForm() {
                       id="hire-email"
                       type="email"
                       autoComplete="email"
-                      className="w-full rounded-lg border border-surface-border bg-surface-light px-3 py-2.5 text-sm text-body placeholder:text-muted focus:border-smaragd focus:outline-none"
+                      className="w-full rounded-lg border border-surface-border bg-surface-light px-3 py-2.5 text-sm text-white placeholder:text-muted focus:border-smaragd focus:outline-none"
                       {...register("email", {
                         required: "Email is required",
                         pattern: {
@@ -146,7 +144,7 @@ export default function CompaniesHireForm() {
                       id="hire-company"
                       type="text"
                       autoComplete="organization"
-                      className="w-full rounded-lg border border-surface-border bg-surface-light px-3 py-2.5 text-sm text-body placeholder:text-muted focus:border-smaragd focus:outline-none"
+                      className="w-full rounded-lg border border-surface-border bg-surface-light px-3 py-2.5 text-sm text-white placeholder:text-muted focus:border-smaragd focus:outline-none"
                       {...register("company", {
                         required: "Company name is required",
                       })}
@@ -169,7 +167,7 @@ export default function CompaniesHireForm() {
                     <textarea
                       id="hire-message"
                       rows={4}
-                      className="w-full resize-y rounded-lg border border-surface-border bg-surface-light px-3 py-2.5 text-sm text-body placeholder:text-muted focus:border-smaragd focus:outline-none"
+                      className="w-full resize-y rounded-lg border border-surface-border bg-surface-light px-3 py-2.5 text-sm text-white placeholder:text-muted focus:border-smaragd focus:outline-none"
                       {...register("message", {
                         required: "Please describe your request",
                       })}
@@ -181,12 +179,13 @@ export default function CompaniesHireForm() {
                     )}
                   </div>
 
+                <div className="self-start">
                   <Button type="submit" variant="coral" disabled={isSubmitting}>
                     {isSubmitting ? "Sending…" : "we respond within 24 hours"}
                   </Button>
-                </form>
-              )}
-            </div>
+                </div>
+              </form>
+            )}
           </motion.div>
         </div>
       </div>

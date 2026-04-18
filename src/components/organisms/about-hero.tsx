@@ -77,6 +77,10 @@ export default function AboutHero() {
                 className="flex flex-col gap-5 rounded-[12px] border border-smaragd p-6"
                 noValidate
               >
+                <h2 className="font-heading text-4xl font-bold text-heading md:text-5xl">
+                  Start your search here
+                </h2>
+
                 {/* Name */}
                 <div>
                   <label
@@ -162,7 +166,7 @@ export default function AboutHero() {
                   <textarea
                     id="about-hire-message"
                     rows={4}
-                    className="w-full resize-y rounded-lg border border-surface-border bg-surface-light px-3 py-2.5 text-sm text-body placeholder:text-muted focus:border-smaragd focus:outline-none"
+                    className="w-full resize-y rounded-lg border border-surface-border bg-surface-light px-3 py-2.5 text-sm text-white placeholder:text-muted focus:border-smaragd focus:outline-none"
                     {...register("message", {
                       required: "Please describe your request",
                     })}

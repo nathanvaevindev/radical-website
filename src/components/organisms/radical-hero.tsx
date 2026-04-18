@@ -4,16 +4,6 @@ import { useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const DOMAINS = [
-  "AI Engineering",
-  "Design",
-  "Strategy",
-  "Innovation",
-  "Ethics",
-  "Product",
-  "Automations",
-];
-
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0 },
@@ -40,24 +30,6 @@ export default function RadicalHero() {
         />
         <div className="absolute inset-0 bg-page/70" />
       </div>
-
-      {/* Domain tags — top left */}
-      <motion.div
-        className="absolute left-6 top-8 z-10 flex flex-wrap gap-2 lg:left-10 lg:top-10"
-        variants={fadeUp}
-        initial="hidden"
-        animate="visible"
-        transition={{ duration: 0.5 }}
-      >
-        {DOMAINS.map((d) => (
-          <span
-            key={d}
-            className="rounded-full bg-surface/60 px-3 py-1 text-xs font-medium text-muted backdrop-blur-sm"
-          >
-            {d}
-          </span>
-        ))}
-      </motion.div>
 
       {/* Centre content */}
       <div className="relative z-10 px-6 text-center">

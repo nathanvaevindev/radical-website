@@ -58,7 +58,7 @@ export default function HomeFounders() {
                   src={f.photoUrl}
                   alt={`Portrait of ${f.name}`}
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>

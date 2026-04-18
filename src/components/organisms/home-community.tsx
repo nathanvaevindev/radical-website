@@ -175,29 +175,13 @@ export default function HomeCommunity({ events }: Props) {
             transition={{ duration: 0.5, delay: 0.15 }}
           >
             <div className="relative aspect-[4/3] w-full bg-surface-light md:aspect-auto md:h-full md:min-h-[480px]">
-              {/* Placeholder — replace with real community photo from Supabase Storage */}
-              <div className="absolute inset-0 flex items-center justify-center bg-surface-light">
-                <div className="text-center">
-                  <div className="mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-full bg-smaragd/10">
-                    <svg
-                      width="28"
-                      height="28"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      className="text-smaragd"
-                      aria-hidden="true"
-                    >
-                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                      <circle cx="9" cy="7" r="4" />
-                      <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                    </svg>
-                  </div>
-                  <p className="text-sm text-muted">Community photo</p>
-                </div>
-              </div>
+              <Image
+                src="/photos/Chinese_Dutch_woman_twenties_parc.png"
+                alt="Radical community"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
           </motion.div>
         </div>
