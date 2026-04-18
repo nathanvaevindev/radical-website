@@ -250,14 +250,33 @@ export default function ParticleRCanvas() {
         h,
         cfg.rScale
       );
-      const curX = new Float32Array(restX);
-      const curY = new Float32Array(restY);
+      const curX = new Float32Array(N);
+      const curY = new Float32Array(N);
       const velX = new Float32Array(N);
       const velY = new Float32Array(N);
 
       // Per-particle random phase for organic motion
       const phase = new Float32Array(N);
       for (let i = 0; i < N; i++) phase[i] = Math.random() * Math.PI * 2;
+
+      // ── Entrance state ──────────────────────────────────────
+      // Particles start scattered across (and slightly outside) the viewport
+      // and converge on their favicon-shape rest positions.
+      const startX = new Float32Array(N);
+      const startY = new Float32Array(N);
+      const enterDelay = new Float32Array(N);
+      const enterDur = new Float32Array(N);
+
+      const marginX = w * 0.15;
+      const marginY = h * 0.15;
+      for (let i = 0; i < N; i++) {
+        startX[i] = -marginX + Math.random() * (w + 2 * marginX);
+        startY[i] = -marginY + Math.random() * (h + 2 * marginY);
+        enterDelay[i] = Math.random() * 0.25; // 0–250ms stagger
+        enterDur[i] = 0.8 + Math.random() * 0.4; // 800–1200ms per particle
+        curX[i] = startX[i];
+        curY[i] = startY[i];
+      }
 
       // ── Ambient particles ───────────────────────────────────
       const ambientCount = cfg.ambientCount;
@@ -313,8 +332,25 @@ export default function ParticleRCanvas() {
         const breath = 1 + Math.sin(time * BREATH_SPEED) * BREATH_DEPTH;
         const driftAmp = FLOAT_AMP * breath;
 
-        // ── Main figure physics ───────────────────────────────
+        // ── Main figure: entrance OR physics per particle ─────
         for (let i = 0; i < N; i++) {
+          const tEnter = (time - enterDelay[i]) / enterDur[i];
+
+          if (tEnter < 1) {
+            // Entrance phase — kinematic interpolation, no physics
+            if (tEnter <= 0) {
+              curX[i] = startX[i];
+              curY[i] = startY[i];
+            } else {
+              // Ease-out cubic: fast start, soft settle
+              const e = 1 - (1 - tEnter) ** 3;
+              curX[i] = startX[i] + (restX[i] - startX[i]) * e;
+              curY[i] = startY[i] + (restY[i] - startY[i]) * e;
+            }
+            continue;
+          }
+
+          // ── Existing physics (unchanged) ────────────────────
           const p = phase[i];
 
           // Slow per-particle drift + fast decorrelated micro-shimmer
