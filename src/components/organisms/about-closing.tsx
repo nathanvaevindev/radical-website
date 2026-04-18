@@ -12,7 +12,7 @@ export default function AboutClosing() {
   return (
     <section className="py-12 lg:py-16">
       <div className="mx-auto max-w-[1280px] px-6 lg:px-8">
-        <div className="mx-auto max-w-[720px]">
+        <div className="mx-auto max-w-[1080px]">
           <motion.h2
             className="text-center font-heading text-4xl font-bold text-heading md:text-5xl"
             variants={fadeUp}

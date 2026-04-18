@@ -42,7 +42,7 @@ const fadeUp = {
 export default function HomeApac() {
   return (
     <section className="pt-6 pb-12 lg:pt-8 lg:pb-16">
-      <div className="mx-auto max-w-[720px] px-6 lg:px-8">
+      <div className="mx-auto max-w-[1080px] px-6 lg:px-8">
         {/* Header */}
         <motion.h2
           className="font-heading text-4xl font-bold text-heading md:text-5xl"

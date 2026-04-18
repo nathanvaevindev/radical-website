@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const DOMAINS = [
@@ -18,10 +20,24 @@ const fadeUp = {
 };
 
 export default function RadicalHero() {
+  useEffect(() => {
+    // Force top-of-page on every mount, bypassing smooth-scroll CSS
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, []);
+
   return (
     <section className="relative flex min-h-[85dvh] items-center justify-center overflow-hidden">
-      {/* Background portrait placeholder */}
-      <div className="absolute inset-0 bg-surface-light">
+      {/* Full-bleed background image with dark overlay */}
+      <div className="absolute inset-0">
+        <Image
+          src="/photos/Jongedame_AI.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
         <div className="absolute inset-0 bg-page/70" />
       </div>
 

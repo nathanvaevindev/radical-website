@@ -11,6 +11,7 @@ type FounderBlockProps = {
   imageSrc: string;
   email?: string;
   flipped?: boolean;
+  objectPosition?: string;
 };
 
 const fadeUp = {
@@ -26,6 +27,7 @@ export default function FounderBlock({
   imageSrc,
   email,
   flipped = false,
+  objectPosition,
 }: FounderBlockProps) {
   const portrait = (
     <motion.div
@@ -41,6 +43,7 @@ export default function FounderBlock({
         alt={`Portrait of ${name}`}
         fill
         className="object-cover"
+        style={objectPosition ? { objectPosition } : undefined}
         sizes="(max-width: 768px) 50vw, 25vw"
       />
     </motion.div>

@@ -19,7 +19,7 @@ const PLACEHOLDER_ROLES: (Role & { intro: string })[] = [
       "Works closely with product and data teams",
       "Ensures performance, reliability, and adaptability",
     ],
-    imageUrl: null,
+    imageUrl: "/photos/Dutch_man_mid_twenties_half_long_hair.png",
   },
   {
     id: "2",
@@ -33,7 +33,7 @@ const PLACEHOLDER_ROLES: (Role & { intro: string })[] = [
       "Advises teams on responsible data practices",
       "Bridges technical and regulatory requirements",
     ],
-    imageUrl: null,
+    imageUrl: "/photos/Dutch_woman_early_forties.png",
   },
   {
     id: "3",
@@ -47,7 +47,7 @@ const PLACEHOLDER_ROLES: (Role & { intro: string })[] = [
       "Communicates findings to technical and non-technical stakeholders",
       "Collaborates with engineering on data pipeline quality",
     ],
-    imageUrl: null,
+    imageUrl: "/photos/Scandinavian_woman_ealy_thirties.png",
   },
   {
     id: "4",
@@ -75,7 +75,7 @@ const PLACEHOLDER_ROLES: (Role & { intro: string })[] = [
       "Optimises model serving for latency and throughput",
       "Collaborates with data scientists and platform teams",
     ],
-    imageUrl: null,
+    imageUrl: "/photos/South_Asian%20man.png",
   },
   {
     id: "6",
@@ -89,7 +89,7 @@ const PLACEHOLDER_ROLES: (Role & { intro: string })[] = [
       "Prioritises based on impact, feasibility, and user value",
       "Ensures products ship with quality and purpose",
     ],
-    imageUrl: null,
+    imageUrl: "/photos/Spanish_man_mid_thirties.png",
   },
 ];
 

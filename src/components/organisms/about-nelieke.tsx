@@ -7,7 +7,7 @@ export default function AboutNelieke() {
       title="Co-founder of Radical"
       email="nelieke@radicalrecruitment.ai"
       quote="When you are connected to yourself, you can build the future with humanity in mind."
-      imageSrc="/nelieke.jpeg"
+      imageSrc="/photos/Nelieke_chill.jpg"
       paragraphs={[
         "With more than 20 years at the top of recruitment, Nelieke knows the market inside out. In 2024 she chose to change direction radically.",
         "Her mission is clear: guiding AI-natives in balancing rational thinking with emotional awareness. Only when head, heart, and spirit align does real growth emerge.",

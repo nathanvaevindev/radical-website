@@ -42,24 +42,6 @@ const PLACEHOLDER_TEAM: TeamMember[] = [
     linkedinUrl: null,
     sortOrder: 4,
   },
-  {
-    id: "5",
-    name: "TBD",
-    role: "Partner",
-    photoUrl: null,
-    bio: "Details coming soon.",
-    linkedinUrl: null,
-    sortOrder: 5,
-  },
-  {
-    id: "6",
-    name: "TBD",
-    role: "Advisor",
-    photoUrl: null,
-    bio: "Details coming soon.",
-    linkedinUrl: null,
-    sortOrder: 6,
-  },
 ];
 
 const fadeUp = {
@@ -123,7 +105,7 @@ export default function AboutTeam({ team }: Props) {
                     src={member.photoUrl}
                     alt={`Portrait of ${member.name}`}
                     fill
-                    className="object-cover"
+                    className="object-cover object-top"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 ) : (

@@ -43,11 +43,21 @@ export default function ContactForm() {
     <section className="flex min-h-[75dvh] items-center py-12 lg:py-16">
       <div className="mx-auto w-full max-w-[540px] px-6 lg:px-8">
         <motion.h1
-          className="font-heading text-4xl font-bold text-heading md:text-5xl"
+          className="font-heading text-5xl font-bold leading-tight text-heading md:text-6xl lg:text-7xl"
           variants={fadeUp}
           initial="hidden"
           animate="visible"
           transition={{ duration: 0.5 }}
+        >
+          Your search starts here
+        </motion.h1>
+
+        <motion.h1
+          className="mt-6 font-heading text-4xl font-bold text-heading md:text-5xl"
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          transition={{ duration: 0.5, delay: 0.05 }}
         >
           Get in touch
         </motion.h1>

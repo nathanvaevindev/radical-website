@@ -74,7 +74,7 @@ export default function AboutHero() {
             ) : (
               <form
                 onSubmit={handleSubmit(onSubmit)}
-                className="flex flex-col gap-5"
+                className="flex flex-col gap-5 rounded-[12px] border border-smaragd p-6"
                 noValidate
               >
                 {/* Name */}
@@ -89,7 +89,7 @@ export default function AboutHero() {
                     id="about-hire-name"
                     type="text"
                     autoComplete="name"
-                    className="w-full rounded-lg border border-surface-border bg-surface-light px-3 py-2.5 text-sm text-body placeholder:text-muted focus:border-smaragd focus:outline-none"
+                    className="w-full rounded-lg border border-surface-border bg-surface-light px-3 py-2.5 text-sm text-white placeholder:text-muted focus:border-smaragd focus:outline-none"
                     {...register("name", { required: "Name is required" })}
                   />
                   {errors.name && (
@@ -111,7 +111,7 @@ export default function AboutHero() {
                     id="about-hire-email"
                     type="email"
                     autoComplete="email"
-                    className="w-full rounded-lg border border-surface-border bg-surface-light px-3 py-2.5 text-sm text-body placeholder:text-muted focus:border-smaragd focus:outline-none"
+                    className="w-full rounded-lg border border-surface-border bg-surface-light px-3 py-2.5 text-sm text-white placeholder:text-muted focus:border-smaragd focus:outline-none"
                     {...register("email", {
                       required: "Email is required",
                       pattern: {
@@ -139,7 +139,7 @@ export default function AboutHero() {
                     id="about-hire-company"
                     type="text"
                     autoComplete="organization"
-                    className="w-full rounded-lg border border-surface-border bg-surface-light px-3 py-2.5 text-sm text-body placeholder:text-muted focus:border-smaragd focus:outline-none"
+                    className="w-full rounded-lg border border-surface-border bg-surface-light px-3 py-2.5 text-sm text-white placeholder:text-muted focus:border-smaragd focus:outline-none"
                     {...register("company", {
                       required: "Company name is required",
                     })}
@@ -174,9 +174,11 @@ export default function AboutHero() {
                   )}
                 </div>
 
-                <Button type="submit" variant="coral" disabled={isSubmitting}>
-                  {isSubmitting ? "Sending…" : "we respond within 24 hours"}
-                </Button>
+                <div className="self-start">
+                  <Button type="submit" variant="coral" disabled={isSubmitting}>
+                    {isSubmitting ? "Sending…" : "we respond within 24 hours"}
+                  </Button>
+                </div>
               </form>
             )}
           </motion.div>
