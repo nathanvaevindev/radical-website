@@ -14,7 +14,7 @@ export default function AboutClosing() {
       <div className="mx-auto max-w-[1280px] px-6 lg:px-8">
         <div className="mx-auto max-w-[720px]">
           <motion.h2
-            className="font-heading text-4xl font-bold text-heading md:text-5xl"
+            className="text-center font-heading text-4xl font-bold text-heading md:text-5xl"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
@@ -25,7 +25,7 @@ export default function AboutClosing() {
           </motion.h2>
 
           <motion.div
-            className="mt-10 flex flex-col gap-6 text-lg leading-relaxed text-body md:text-xl md:leading-relaxed"
+            className="mt-10 flex flex-col gap-6 text-center text-lg leading-relaxed text-body md:text-xl md:leading-relaxed"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"

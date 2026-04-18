@@ -29,7 +29,7 @@ const APAC_ITEMS = [
     letter: "C",
     title: "Connection",
     description:
-      "Stays grounded and connects with inner values, your team and the world around oneself, peers, and the organizational mission.",
+      "Is grounded and connects with inner values, your team and the world around us.",
     color: "text-apac-connection",
   },
 ];

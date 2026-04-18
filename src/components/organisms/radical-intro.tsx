@@ -21,12 +21,12 @@ export default function RadicalIntro() {
         >
           At Radical Recruitment, it&apos;s about who you are, not just what&apos;s
           on your r&eacute;sum&eacute;. Our Radical Community consists of
-          candidates that stand out. Every candidate is assessed using APAC,
-          our proprietary framework built around the human factors that predict
-          success in AI roles. So companies already know you are exceptional
-          before the first conversation. Join our Radical Community; it is more
-          than a gateway to a job; it&apos;s a community where your human
-          qualities are recognized as your greatest asset.
+          candidates that stand out. Every candidate is assessed with our
+          proprietary APAC-framework, a test about the human factors that
+          predict success in AI roles. So companies already know you are
+          exceptional before the first conversation. Join our Radical Community;
+          it is more than a gateway to a job; it&apos;s a community where your
+          human qualities are recognized as your greatest asset.
         </motion.p>
       </div>
     </section>

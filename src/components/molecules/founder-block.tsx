@@ -66,7 +66,7 @@ export default function FounderBlock({
       </div>
 
       <div className="mt-8">
-        <p className="font-heading text-xl font-bold text-heading">{name}</p>
+        <p className="font-heading text-2xl font-bold text-heading">{name}</p>
         <p className="text-sm text-body">{title}</p>
         {email && (
           <a

@@ -30,7 +30,7 @@ const variantStyles: Record<Variant, string> = {
   coral:
     "bg-coral text-white hover:bg-coral-dark active:scale-95 shadow-[0_0_0_0_transparent] hover:shadow-glow-coral",
   dark:
-    "bg-black text-white hover:bg-black/80 active:scale-95",
+    "bg-black text-white border border-white/30 hover:bg-black/80 active:scale-95",
 };
 
 const sizeStyles: Record<Size, string> = {

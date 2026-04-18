@@ -36,7 +36,7 @@ export default function AboutHero() {
   return (
     <section className="py-16 lg:py-20">
       <div className="mx-auto max-w-[1280px] px-6 lg:px-8">
-        <div className="grid items-start gap-12 md:grid-cols-2 lg:gap-16">
+        <div className="grid items-center gap-12 md:grid-cols-2 lg:gap-16">
           {/* Left column — H1 + body */}
           <motion.div
             variants={fadeUp}
@@ -44,7 +44,7 @@ export default function AboutHero() {
             animate="visible"
             transition={{ duration: 0.6 }}
           >
-            <h1 className="font-heading text-4xl font-bold leading-snug text-heading md:text-5xl lg:text-6xl">
+            <h1 className="font-heading text-5xl font-bold leading-tight text-heading md:text-6xl lg:text-7xl">
               We are here for doers, thinkers, and builders. Where technology
               meets its human on the loop.
             </h1>

@@ -18,14 +18,8 @@ export default function CompaniesHero() {
           animate="visible"
           transition={{ duration: 0.6 }}
         >
-          <span className="block">
-            The real power of AI is not in the code, but in the human conscience
-            behind it.
-          </span>
-          <span className="mt-8 block">
-            We provide selected professionals who ensure your technology works,
-            continues to grow, compliant with the EU AI act.
-          </span>
+          The real power of AI is not in the code, but in the human conscience
+          behind it.
         </motion.h1>
 
         <motion.p
