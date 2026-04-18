@@ -14,7 +14,7 @@ export default function AboutClosing() {
       <div className="mx-auto max-w-[1280px] px-6 lg:px-8">
         <div className="mx-auto max-w-[720px]">
           <motion.h2
-            className="font-heading text-4xl font-bold text-heading md:text-5xl lg:text-6xl"
+            className="font-heading text-4xl font-bold text-heading md:text-5xl"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
@@ -47,14 +47,16 @@ export default function AboutClosing() {
         </div>
 
         <motion.h1
-          className="mt-16 text-center font-heading text-5xl font-bold leading-tight text-heading md:text-6xl lg:text-7xl"
+          className="mt-16 text-center font-heading text-2xl font-bold leading-snug text-heading md:text-3xl"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.5, delay: 0.15 }}
         >
-          Join the movement. Hire a Radical. Be a Radical.
+          <span className="block">Join the movement.</span>
+          <span className="block">Hire a Radical.</span>
+          <span className="block">Be a Radical.</span>
         </motion.h1>
 
         <motion.div

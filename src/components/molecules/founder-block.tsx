@@ -29,7 +29,7 @@ export default function FounderBlock({
 }: FounderBlockProps) {
   const portrait = (
     <motion.div
-      className="relative aspect-[3/4] overflow-hidden rounded-[12px] bg-surface-light"
+      className="relative mx-auto aspect-[3/4] w-1/2 overflow-hidden rounded-[12px] bg-surface-light"
       variants={fadeUp}
       initial="hidden"
       whileInView="visible"
@@ -41,7 +41,7 @@ export default function FounderBlock({
         alt={`Portrait of ${name}`}
         fill
         className="object-cover"
-        sizes="(max-width: 768px) 100vw, 50vw"
+        sizes="(max-width: 768px) 50vw, 25vw"
       />
     </motion.div>
   );
@@ -66,8 +66,8 @@ export default function FounderBlock({
       </div>
 
       <div className="mt-8">
-        <p className="font-heading text-lg font-bold text-heading">{name}</p>
-        <p className="text-sm text-muted">{title}</p>
+        <p className="font-heading text-xl font-bold text-heading">{name}</p>
+        <p className="text-sm text-body">{title}</p>
         {email && (
           <a
             href={`mailto:${email}`}
