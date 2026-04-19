@@ -42,7 +42,7 @@ const fadeUp = {
 export default function HomeApac() {
   return (
     <section className="pt-6 pb-12 lg:pt-8 lg:pb-16">
-      <div className="mx-auto max-w-[1080px] px-6 lg:px-8">
+      <div className="mx-auto max-w-[1080px] px-6 text-center lg:px-8">
         {/* Header */}
         <motion.h2
           className="font-heading text-4xl font-bold text-heading md:text-5xl"
@@ -80,7 +80,7 @@ export default function HomeApac() {
               viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.5, delay: 0.08 * i }}
             >
-              <div className="flex items-baseline gap-3">
+              <div className="flex items-baseline justify-center gap-3">
                 <span
                   className={`font-heading text-2xl font-bold ${item.color}`}
                 >
@@ -97,7 +97,7 @@ export default function HomeApac() {
 
         {/* CTAs */}
         <motion.div
-          className="mt-14 flex flex-col gap-4 sm:flex-row"
+          className="mt-14 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
