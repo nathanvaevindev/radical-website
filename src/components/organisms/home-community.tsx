@@ -116,7 +116,7 @@ export default function HomeCommunity({ events }: Props) {
                 return (
                   <motion.div
                     key={event.id}
-                    className="flex gap-4 rounded-[12px] border border-surface-border bg-surface p-4 transition-shadow duration-200 hover:shadow-card-hover"
+                    className="flex gap-4 rounded-sm border border-surface-border bg-surface p-4 transition-shadow duration-200 hover:shadow-card-hover"
                     variants={fadeUp}
                     initial="hidden"
                     whileInView="visible"
@@ -167,7 +167,7 @@ export default function HomeCommunity({ events }: Props) {
 
           {/* Right — Community image */}
           <motion.div
-            className="relative overflow-hidden rounded-[12px]"
+            className="relative overflow-hidden rounded-sm"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"

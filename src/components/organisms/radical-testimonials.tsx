@@ -112,7 +112,7 @@ function Stars({ count }: { count: number }) {
 
 function TestimonialCard({ t }: { t: Testimonial }) {
   return (
-    <div className="flex w-[340px] shrink-0 flex-col gap-4 rounded-[12px] border border-surface-border bg-surface p-6 sm:w-[400px]">
+    <div className="flex w-[340px] shrink-0 flex-col gap-4 rounded-sm border border-surface-border bg-surface p-6 sm:w-[400px]">
       <p className="text-sm leading-relaxed text-heading">
         &ldquo;{t.quote}&rdquo;
       </p>

@@ -48,7 +48,7 @@ export default function CompaniesMatching() {
           How We Match You With Your Radical
         </motion.h2>
 
-        <div className="mt-12">
+        <div className="mt-12 flex justify-center">
           <StepTimeline steps={STEPS} />
         </div>
       </div>

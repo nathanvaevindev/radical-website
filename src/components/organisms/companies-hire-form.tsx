@@ -40,7 +40,7 @@ export default function CompaniesHireForm() {
         <div className="grid items-start gap-12 md:grid-cols-2 lg:gap-16">
           {/* Left — Nelieke portrait */}
           <motion.div
-            className="relative mx-auto aspect-[4/5] w-1/2 overflow-hidden rounded-[12px] bg-surface-light"
+            className="relative mx-auto aspect-[4/5] w-1/2 overflow-hidden rounded-sm bg-surface-light"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
@@ -65,7 +65,7 @@ export default function CompaniesHireForm() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             {submitted ? (
-              <div className="rounded-[12px] border border-smaragd/20 bg-smaragd/5 p-8 text-center">
+              <div className="rounded-sm border border-smaragd/20 bg-smaragd/5 p-8 text-center">
                 <p className="font-heading text-xl font-bold text-heading">
                   Thank you
                 </p>
@@ -76,7 +76,7 @@ export default function CompaniesHireForm() {
             ) : (
               <form
                 onSubmit={handleSubmit(onSubmit)}
-                className="flex flex-col gap-5 rounded-[12px] border border-smaragd p-6"
+                className="flex flex-col gap-5 rounded-sm border border-coral p-6"
                 noValidate
               >
                 <h2 className="font-heading text-4xl font-bold text-heading md:text-5xl">

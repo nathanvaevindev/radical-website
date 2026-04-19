@@ -80,7 +80,7 @@ function PlaceholderIcon() {
 function SlideCard({ slide }: { slide: Slide }) {
   return (
     <div
-      className="relative aspect-[4/3] w-[280px] shrink-0 overflow-hidden rounded-[12px] bg-surface-light sm:w-[360px] lg:w-[420px]"
+      className="relative aspect-[4/3] w-[280px] shrink-0 overflow-hidden rounded-sm bg-surface-light sm:w-[360px] lg:w-[420px]"
       aria-hidden={slide.src ? undefined : true}
     >
       {slide.src ? (

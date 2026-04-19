@@ -85,7 +85,7 @@ export default function CompaniesApac() {
           {APAC_ITEMS.map((item, i) => (
             <motion.div
               key={item.title + i}
-              className="relative flex flex-col items-center rounded-[16px] border border-surface-border bg-surface p-8 text-center"
+              className="relative flex flex-col items-center rounded-sm border border-surface-border bg-surface p-8 text-center"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"

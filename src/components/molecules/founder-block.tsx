@@ -31,7 +31,7 @@ export default function FounderBlock({
 }: FounderBlockProps) {
   const portrait = (
     <motion.div
-      className="relative mx-auto aspect-[3/4] w-1/2 overflow-hidden rounded-[12px] bg-surface-light"
+      className="relative mx-auto aspect-[3/4] w-1/2 overflow-hidden rounded-sm bg-surface-light"
       variants={fadeUp}
       initial="hidden"
       whileInView="visible"

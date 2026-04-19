@@ -35,7 +35,7 @@ export default function HeroHome() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 60% 50% at 50% 40%, rgba(46,213,115,0.05) 0%, transparent 70%)",
+            "radial-gradient(ellipse 60% 50% at 50% 40%, rgba(0,168,107,0.05) 0%, transparent 70%)",
         }}
         aria-hidden="true"
       />

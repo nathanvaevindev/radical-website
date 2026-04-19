@@ -34,7 +34,7 @@ export default function HomeCta() {
           >
             <Link
               href="/contact"
-              className="group flex flex-col items-center justify-center rounded-[12px] border border-surface-border bg-surface p-10 text-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-card-hover lg:p-14"
+              className="group flex flex-col items-center justify-center rounded-sm border border-surface-border bg-surface p-10 text-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-card-hover lg:p-14"
             >
               <span className="font-heading text-2xl font-bold text-heading transition-colors duration-200 group-hover:text-smaragd lg:text-3xl">
                 For Companies
@@ -55,7 +55,7 @@ export default function HomeCta() {
           >
             <Link
               href="https://radicalnetwork.nl"
-              className="group flex flex-col items-center justify-center rounded-[12px] border border-surface-border bg-surface p-10 text-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-card-hover lg:p-14"
+              className="group flex flex-col items-center justify-center rounded-sm border border-surface-border bg-surface p-10 text-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-card-hover lg:p-14"
             >
               <span className="font-heading text-2xl font-bold text-heading transition-colors duration-200 group-hover:text-smaragd lg:text-3xl">
                 For Professionals

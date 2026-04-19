@@ -63,7 +63,7 @@ export default function AboutHero() {
             transition={{ duration: 0.6, delay: 0.15 }}
           >
             {submitted ? (
-              <div className="rounded-[12px] border border-smaragd/20 bg-smaragd/5 p-8 text-center">
+              <div className="rounded-sm border border-smaragd/20 bg-smaragd/5 p-8 text-center">
                 <p className="font-heading text-xl font-bold text-heading">
                   Thank you
                 </p>
@@ -74,7 +74,7 @@ export default function AboutHero() {
             ) : (
               <form
                 onSubmit={handleSubmit(onSubmit)}
-                className="flex flex-col gap-5 rounded-[12px] border border-smaragd p-6"
+                className="flex flex-col gap-5 rounded-sm border border-coral p-6"
                 noValidate
               >
                 <h2 className="font-heading text-4xl font-bold text-heading md:text-5xl">

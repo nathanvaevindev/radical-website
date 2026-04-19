@@ -42,7 +42,7 @@ export default function CompaniesProfiles() {
           {BLOCKS.map((block, i) => (
             <motion.div
               key={block.title}
-              className="rounded-[12px] border border-surface-border bg-surface p-7"
+              className="rounded-sm border border-surface-border bg-surface p-7"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"

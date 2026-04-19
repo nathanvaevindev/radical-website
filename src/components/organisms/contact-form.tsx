@@ -80,7 +80,7 @@ export default function ContactForm() {
           transition={{ duration: 0.5, delay: 0.15 }}
         >
           {submitted ? (
-            <div className="rounded-[12px] border border-smaragd/20 bg-smaragd/5 p-8 text-center">
+            <div className="rounded-sm border border-smaragd/20 bg-smaragd/5 p-8 text-center">
               <p className="font-heading text-xl font-bold text-heading">
                 Thank you
               </p>

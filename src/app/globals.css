@@ -7,18 +7,18 @@
 /* ─── Theme tokens ────────────────────────────────────────── */
 @theme inline {
   /* Accent colors */
-  --color-smaragd: #2ed573;
-  --color-smaragd-dark: #22b85a;
-  --color-smaragd-light: #5ee89a;
-  --color-coral: #e6734f;
-  --color-coral-dark: #d45a35;
-  --color-coral-light: #f09e85;
+  --color-smaragd: #00A86B;
+  --color-smaragd-dark: #008c58;
+  --color-smaragd-light: #1bc282;
+  --color-coral: #FF7F50;
+  --color-coral-dark: #e66d43;
+  --color-coral-light: #ff9670;
 
   /* APAC dimension colors */
-  --color-apac-adaptability: #2ed573;
-  --color-apac-personality: #e6734f;
-  --color-apac-awareness: #3b82f6;
-  --color-apac-connection: #8b5cf6;
+  --color-apac-adaptability: #00A86B;
+  --color-apac-personality: #FF7F50;
+  --color-apac-awareness: #F5F5F5;
+  --color-apac-connection: #A0A0A0;
 
   /* Semantic colors — backed by CSS vars, switch by toggling .dark on <html> */
   --color-page: var(--bg-page);
@@ -30,24 +30,23 @@
   --color-muted: var(--text-muted);
 
   /* Typography */
-  --font-heading: "Afacad Flux", sans-serif;
+  --font-heading: "Courier Prime", monospace;
   --font-body: var(--font-inter), "Inter", sans-serif;
   --font-courier: "Courier Prime", monospace;
 
-  /* Border radius (per design spec) */
+  /* Border radius (per design spec — max 4px) */
   --radius-sm: 4px;
-  --radius-default: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
+  --radius-default: 4px;
+  --radius-lg: 4px;
+  --radius-xl: 4px;
   --radius-full: 9999px;
 
-  /* Named shadows */
-  --shadow-card: 0 0 0 1px #27272a, 0 2px 8px rgba(0, 0, 0, 0.4);
-  --shadow-card-hover: 0 0 0 1px rgba(46, 213, 115, 0.2),
-    0 4px 24px rgba(0, 0, 0, 0.5);
-  --shadow-glow-smaragd: 0 0 40px rgba(46, 213, 115, 0.18);
-  --shadow-glow-smaragd-strong: 0 0 64px rgba(46, 213, 115, 0.3);
-  --shadow-glow-coral: 0 0 40px rgba(230, 115, 79, 0.18);
+  /* Named shadows — cards have no shadow in the new system */
+  --shadow-card: none;
+  --shadow-card-hover: none;
+  --shadow-glow-smaragd: 0 0 40px rgba(0, 168, 107, 0.22);
+  --shadow-glow-smaragd-strong: 0 0 64px rgba(0, 168, 107, 0.35);
+  --shadow-glow-coral: 0 0 40px rgba(255, 127, 80, 0.22);
 
   /* Animations */
   --animate-float: float 8s ease-in-out infinite;
@@ -70,14 +69,14 @@
 
 /* Dark mode (.dark on <html>) — default for this project */
 :root.dark {
-  --bg-page: #0d0d14;
-  --bg-surface: #13131f;
-  --bg-surface-light: #1a1a2e;
-  --bg-surface-border: #252538;
+  --bg-page: #0A0F0D;
+  --bg-surface: rgba(255, 255, 255, 0.03);
+  --bg-surface-light: rgba(255, 255, 255, 0.03);
+  --bg-surface-border: rgba(255, 255, 255, 0.08);
 
-  --text-heading: #f0f2f8;
-  --text-body: #b8bdd4;
-  --text-muted: #5d6280;
+  --text-heading: #F5F5F5;
+  --text-body: #D4D4D4;
+  --text-muted: #A0A0A0;
 }
 
 /* ─── Base styles ─────────────────────────────────────────── */
@@ -93,16 +92,25 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
 /* ─── Custom utilities ────────────────────────────────────── */
 @utility gradient-text {
-  background: linear-gradient(135deg, #2ed573 0%, #5ee89a 50%, #2ed573 100%);
+  background: linear-gradient(135deg, #00A86B 0%, #1bc282 50%, #00A86B 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 @utility gradient-text-warm {
-  background: linear-gradient(135deg, #2ed573 0%, #e6734f 100%);
+  background: linear-gradient(135deg, #00A86B 0%, #FF7F50 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

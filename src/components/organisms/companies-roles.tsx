@@ -124,7 +124,7 @@ export default function CompaniesRoles({ roles }: Props) {
         </motion.h2>
 
         <motion.div
-          className="mt-12 overflow-hidden rounded-[12px] border border-surface-border bg-surface p-6 md:p-8 lg:p-10"
+          className="mt-12 overflow-hidden rounded-sm border border-surface-border bg-surface p-6 md:p-8 lg:p-10"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"

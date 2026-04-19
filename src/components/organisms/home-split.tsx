@@ -14,7 +14,7 @@ export default function HomeSplit() {
       <div className="mx-auto grid max-w-[1280px] gap-6 px-6 md:grid-cols-2 lg:gap-8 lg:px-8">
         {/* Companies — left */}
         <motion.div
-          className="flex flex-col justify-between rounded-[12px] border border-surface-border bg-surface p-8 lg:p-10"
+          className="flex flex-col justify-between rounded-sm border border-surface-border bg-surface p-8 lg:p-10"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
@@ -54,7 +54,7 @@ export default function HomeSplit() {
 
         {/* Talent — right */}
         <motion.div
-          className="flex flex-col justify-between rounded-[12px] border border-surface-border bg-surface p-8 lg:p-10"
+          className="flex flex-col justify-between rounded-sm border border-surface-border bg-surface p-8 lg:p-10"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"

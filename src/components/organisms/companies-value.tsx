@@ -75,7 +75,7 @@ export default function CompaniesValue() {
 
           {/* Right — Our Tariffs card */}
           <motion.div
-            className="rounded-[12px] border border-surface-border bg-surface p-7"
+            className="rounded-sm border border-surface-border bg-surface p-7"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
@@ -87,7 +87,7 @@ export default function CompaniesValue() {
             </h3>
 
             {/* Sub-card 1 — Placement fees */}
-            <div className="mt-6 rounded-[12px] border border-surface-border bg-surface-light p-5">
+            <div className="mt-6 rounded-sm border border-surface-border bg-surface-light p-5">
               <p className="text-xs font-semibold uppercase tracking-widest text-muted">
                 Radical placement fees
               </p>
@@ -112,7 +112,7 @@ export default function CompaniesValue() {
             </div>
 
             {/* Sub-card 2 — Development fee */}
-            <div className="mt-4 rounded-[12px] border border-surface-border bg-surface-light p-5">
+            <div className="mt-4 rounded-sm border border-surface-border bg-surface-light p-5">
               <p className="text-xs font-semibold uppercase tracking-widest text-muted">
                 Radical development fee*
               </p>

@@ -47,7 +47,7 @@ export default function Button(props: ButtonProps) {
 
   const classes = [
     fullWidth ? "flex w-full" : "inline-flex",
-    "items-center justify-center rounded-full font-semibold transition-all duration-150",
+    "items-center justify-center rounded-sm font-semibold transition-all duration-150",
     "focus-visible:ring-2 focus-visible:ring-smaragd focus-visible:ring-offset-2 focus-visible:ring-offset-page",
     variantStyles[variant],
     sizeStyles[size],

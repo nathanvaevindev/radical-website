@@ -91,7 +91,7 @@ export default function AboutTeam({ team }: Props) {
           {members.map((member, i) => (
             <motion.div
               key={member.id}
-              className="group rounded-[12px] border border-surface-border bg-surface transition-all duration-200 hover:-translate-y-0.5 hover:shadow-card-hover"
+              className="group rounded-sm border border-surface-border bg-surface transition-all duration-200 hover:-translate-y-0.5 hover:shadow-card-hover"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
@@ -99,7 +99,7 @@ export default function AboutTeam({ team }: Props) {
               transition={{ duration: 0.5, delay: 0.08 * i }}
             >
               {/* Portrait */}
-              <div className="relative aspect-[4/3] overflow-hidden rounded-t-[12px] bg-surface-light">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-t-sm bg-surface-light">
                 {member.photoUrl ? (
                   <Image
                     src={member.photoUrl}

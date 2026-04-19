@@ -415,7 +415,7 @@ export default function ParticleRCanvas() {
 
         // ── Draw main figure ──────────────────────────────────
         ctx.globalAlpha = alpha;
-        ctx.fillStyle = "#2ed573";
+        ctx.fillStyle = "#00A86B";
         ctx.beginPath();
         for (let i = 0; i < N; i++) {
           ctx.moveTo(curX[i] + dotR, curY[i]);

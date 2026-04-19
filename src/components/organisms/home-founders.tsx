@@ -46,14 +46,14 @@ export default function HomeFounders() {
           {FOUNDERS.map((f, i) => (
             <motion.div
               key={f.name}
-              className="rounded-[12px] border border-surface-border bg-surface transition-all duration-200 hover:-translate-y-0.5 hover:shadow-card-hover"
+              className="rounded-sm border border-surface-border bg-surface transition-all duration-200 hover:-translate-y-0.5 hover:shadow-card-hover"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.5, delay: 0.08 * i }}
             >
-              <div className="relative aspect-[4/3] overflow-hidden rounded-t-[12px] bg-surface-light">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-t-sm bg-surface-light">
                 <Image
                   src={f.photoUrl}
                   alt={`Portrait of ${f.name}`}
